@@ -5,7 +5,49 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2018-07-02T18:34:57Z</updated>
+  <updated>2018-07-03T05:08:48Z</updated>
+  <entry>
+    <title>This Week in Spring - July 3rd, 2018</title>
+    <link rel="alternate" href="https://spring.io/blog/2018/07/03/this-week-in-spring-july-3rd-2018" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Josh Long</name>
+    </author>
+    <id>tag:spring.io,2018-07-03:3324</id>
+    <updated>2018-07-03T05:08:48Z</updated>
+    <content type="html">&lt;p&gt;Hi Spring fans! Welcome to another installment of &lt;em&gt;This Week in Spring&lt;/em&gt;! This week I&amp;rsquo;m fresh of the amazing Spring Connect S?o Paulo event and speaking with some customers, and now I&amp;rsquo;m in beautiful Rio de Janeiro soaking up the winter rays by he beach, connecting with people in the community, and delivering a (virtual!) 2 day live training course for O&amp;rsquo;Reilly on building cloud-native Java-based applications. In less than two days I&amp;rsquo;ll be home for the first time in almost a month to celebrate the 4th of July. If you&amp;rsquo;re in America, let me be the first to wish you a happy holiday. As usual, we&amp;rsquo;ve got a ton of things to dive into so I&amp;rsquo;ll leave you to it. Let&amp;rsquo;s get going.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Our very own Josh McKenty has a wonderful post, &lt;a href="https://content.pivotal.io/blog/why-i-love-redis"&gt;&lt;em&gt;Why I Love Redis&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;If you&amp;rsquo;re in the Seattle area don&amp;rsquo;t miss this wonderful Spring and &lt;a href="https://connect.pivotal.io/Java-Spring-Cloud-Native-Bootcamp-Seattle.html"&gt;cloud-native bootcamp done in cooperation with Pivotal, Microsoft and Perficient&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;This is promising! This issue &lt;a href="https://github.com/spring-projects/spring-security/issues/4371#issuecomment-401914335"&gt;means that you can now use a reactive &lt;code&gt;WebClient&lt;/code&gt; and have it automatically obtain a new OAuth access token&lt;/a&gt; on your behalf using a &lt;code&gt;refresh&lt;/code&gt; token.&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://spring.io/blog/2018/07/02/spring-cloud-edgware-sr4-has-been-released"&gt;Spring Cloud Edgware.SR4 Has Been Released&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://spring.io/blog/2018/07/02/spring-cloud-open-service-broker-2-0-0-release-is-now-available"&gt;Spring Cloud Open Service Broker 2.0.0.RELEASE is now available&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://spring.io/blog/2018/07/02/spring-cloud-task-1-2-3-release-is-now-available"&gt;Spring Cloud Task 1.2.3.RELEASE is now available&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Hurray! PKS (our enterprise-grade Kubernetes distribution) 1.1 is &lt;a href="https://content.pivotal.io/blog/pivotal-container-service-1-1-now-ga-helps-you-run-kubernetes-without-complexity-why-pks-just-works"&gt;now available&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://spring.io/blog/2018/06/28/spring-cloud-stream-fishtown-m1-2-1-0-m1-release-announcement"&gt;Spring Cloud Stream Fishtown.M1 /2.1.0.M1 Release Announcement&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://spring.io/blog/2018/06/28/spring-cloud-gcp-1-0-0-rc1-now-available"&gt;Spring Cloud GCP 1.0.0.RC1 Now Available&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;We also have an opening on &lt;a href="https://pivotal.io/careers/openings/senior-software-engineer-spring-engineering-team/1223475"&gt;the Spring reliability engineering team&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;We have an opening on &lt;a href="https://pivotal.io/careers/openings/software-engineer-spring-cloud-services/680482"&gt;the Spring Cloud Services team&lt;/a&gt; - join us!&lt;/li&gt;
+  &lt;li&gt;Codecentric have &lt;a href="https://blog.codecentric.de/en/2018/06/batch-web-spring-boot-starter-2-0-1-released/"&gt;updated their Spring Batch starter to 2.0.1&lt;/a&gt;. This starter goes further than Spring Boot&amp;rsquo;s built-in stater and adds a lot of useful functionality that you&amp;rsquo;d do well to consider when using Spring Batch.&lt;/li&gt;
+  &lt;li&gt;Our very own Mario Gray does a wonderful job looking at &lt;a href="https://medium.com/@mgray_94552/reactive-authorization-in-spring-security-943e6534aaeb"&gt;reactive authentication and authorization with Spring Security&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Interesting &lt;a href="https://twitter.com/zipkinproject/status/1013981608611680257"&gt;insight from the Zipkin project&lt;/a&gt; twitter handle: 1) authorization services often blamed for latency, even though getting security services in your traces is a win for transparency. Also, errors are two-sided: ideally, visualize HTTP 400 as success from server point-of-view to better aim blame.&lt;/li&gt;
+  &lt;li&gt;Vojtech Ruzicka&amp;rsquo;s done a nice job looking at detecting build version and time at &lt;a href="https://www.vojtechruzicka.com/spring-boot-version/"&gt;runtime in Spring Boot&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;The Foundry&lt;/em&gt; is a gateway to the Cloud Foundry ecosystem &lt;a href="https://www.cloudfoundry.org/thefoundry/"&gt;of ISVs, distributions, consulting and so much more&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;This blog looks at &lt;a href="https://medium.com/netifi/spring-webflux-and-rxjava2-jdbc-83a94e71ba04"&gt;Spring WebFlux and the RxJava2JDBC project&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;With MongoDB 4.0 GA, &lt;a href="https://twitter.com/springcentral/status/1012495018068594699"&gt;here&amp;rsquo;s what you need to know for multi-document ACID transactions with Spring Data MongoDB&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;Microsoft&amp;rsquo;s Yitao Dong just announced that the Spring Boot starter for Microsoft Azure Active Directory is now integrated with Spring Security 5. With only a few lines of configuration, you can build apps that &lt;a href="https://twitter.com/matthew_dyt/status/1012174445505536000?s=12"&gt;perform authentication with Azure Active Directory OAuth2 and manage authorization with AAD groups&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Community legend Nicolas Frankel has a nice pokst on _how to migrate an app &lt;a href="https://blog.frankel.ch/metrics-spring-boot-2/1/"&gt;from Spring Boot 1.5&amp;rsquo;s metrics subsystem to Micrometer-based metrics&lt;/a&gt;
+&lt;/li&gt;
+  &lt;li&gt;Check out Jen Strater&amp;rsquo;s Warsaw JUG talk on test &lt;a href="https://speakerdeck.com/jlstrater/test-driven-docs-warsaw-jug-2018"&gt;driven documentation with Spring REST Docs&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Former SpringSource CTO Adrian Colyer runs a wonderful series called &lt;em&gt;The Morning Paper&lt;/em&gt;. In this post &lt;a href="https://blog.acolyer.org/2018/06/27/secure-coding-practices-in-java-challenges-and-vulnerabilities/"&gt;he looks at secure coding practices in Java and the challenges&lt;/a&gt; therein. Surprise, surprise: Spring Security is, and has always been, a very popular choice for people trying to address these problems.&lt;/li&gt;
+  &lt;li&gt;Check out Andy Wilkinson&amp;rsquo;s Spring I/O 2018 talk &lt;a href="https://www.youtube.com/watch?v=lW3aN-7izCY&amp;feature=youtu.be"&gt;&amp;ldquo;Mastering Actuator&amp;rdquo;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Check out Dr. Dave Syer&amp;rsquo;s Spring I/O 2018 talk &lt;a href="https://www.youtube.com/watch?v=TDEVSnjnSR8&amp;feature=youtu.be"&gt;&lt;em&gt;Serverless Spring&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://junit.org/junit5/docs/5.3.0-M1/release-notes/"&gt;JUnit 5.3 M1 is out&lt;/a&gt;! Please try out the new parallel test execution support and provide feedback &lt;em&gt;before&lt;/em&gt; the 5.3 GA release!&lt;/li&gt;
+  &lt;li&gt;Does your Kotlin backend use Project Reactor? Good news! The functional composition library, &lt;a href="https://github.com/arrow-kt/arrow/pull/706"&gt;Aarrow, now has support for Project Reactor&lt;/a&gt;, including async/await syntax for &lt;code&gt;Flux&lt;/code&gt; and &lt;code&gt;Mono&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Don&amp;rsquo;t miss &lt;a href="https://springoneplatform.io/2018/training"&gt;the training&lt;/a&gt; for Spring Boot and Spring Cloud at &lt;a href="https://springoneplatform.io/"&gt;this year&amp;rsquo;s SpringOne Platform 2018&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Check out this upcoming Cloud Foundry webinar on July 18, &lt;a href="https://www.brighttalk.com/webcast/16813/327047"&gt;&lt;em&gt;Bring Your Own Code vs. Bring Your Own Container&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+  </entry>
   <entry>
     <title>Spring Cloud Edgware.SR4 Has Been Released</title>
     <link rel="alternate" href="https://spring.io/blog/2018/07/02/spring-cloud-edgware-sr4-has-been-released" />
@@ -1467,122 +1509,5 @@ dependencies {&#xD;
 &lt;p&gt;This will reduce the ceremony around backporting issues (removing the need for confusing tracker issues). We believe it will also help users know wether an issue has been fixed in a maintenance version, by having the github milestone show the earliest maintenance release a fix has been shipped in. Finally, it will help while looking at the fix&amp;rsquo;s code because there will now be a single reference commit for the fix (plus a merge commit that might contain adjustments necessary to make it compatible with newest breaking changes).&lt;/p&gt;
 &lt;p&gt;As we are at a point where a release just happened in both &lt;code&gt;3.1.x&lt;/code&gt; and &lt;code&gt;master&lt;/code&gt;, now is a good time to implement that change in process. See &lt;a href="https://github.com/reactor/reactor-core/issues/1225"&gt;#1225&lt;/a&gt; for more details&lt;/p&gt;
 &lt;p&gt;Happy reactive coding!&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring Session Apple SR3 Released</title>
-    <link rel="alternate" href="https://spring.io/blog/2018/06/14/spring-session-apple-sr3-released" />
-    <category term="releases" label="Releases" />
-    <author>
-      <name>Rob Winch</name>
-    </author>
-    <id>tag:spring.io,2018-06-14:3306</id>
-    <updated>2018-06-14T13:20:48Z</updated>
-    <content type="html">&lt;div class="paragraph"&gt;
-&lt;p&gt;&lt;em&gt;This post was authored by &lt;a href="https://github.com/vpavic"&gt;Vedran Pavi?&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;On behalf of the community I&amp;#8217;m pleased to announce the release of Spring Session BOM &lt;code&gt;Apple-SR3&lt;/code&gt;. This release includes an update of Spring Session core modules (which include Data Redis, Hazelcast and JDBC) to &lt;code&gt;2.0.4.RELEASE&lt;/code&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;The following table provides an overview of all the included modules and their respective versions:&lt;/p&gt;
-&lt;/div&gt;
-&lt;table class="tableblock frame-all grid-all spread"&gt;
-&lt;colgroup&gt;
-&lt;col style="width: 50%;"&gt;
-&lt;col style="width: 50%;"&gt;
-&lt;/colgroup&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th class="tableblock halign-left valign-top"&gt;Module&lt;/th&gt;
-&lt;th class="tableblock halign-left valign-top"&gt;Version&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td class="tableblock halign-left valign-top"&gt;&lt;p class="tableblock"&gt;Spring Session Core&lt;/p&gt;&lt;/td&gt;
-&lt;td class="tableblock halign-left valign-top"&gt;&lt;p class="tableblock"&gt;&lt;code&gt;2.0.4.RELEASE&lt;/code&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td class="tableblock halign-left valign-top"&gt;&lt;p class="tableblock"&gt;Spring Session Data GemFire&lt;/p&gt;&lt;/td&gt;
-&lt;td class="tableblock halign-left valign-top"&gt;&lt;p class="tableblock"&gt;&lt;code&gt;2.0.2.RELEASE&lt;/code&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td class="tableblock halign-left valign-top"&gt;&lt;p class="tableblock"&gt;Spring Session Data Geode&lt;/p&gt;&lt;/td&gt;
-&lt;td class="tableblock halign-left valign-top"&gt;&lt;p class="tableblock"&gt;&lt;code&gt;2.0.2.RELEASE&lt;/code&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td class="tableblock halign-left valign-top"&gt;&lt;p class="tableblock"&gt;Spring Session Data MongoDB&lt;/p&gt;&lt;/td&gt;
-&lt;td class="tableblock halign-left valign-top"&gt;&lt;p class="tableblock"&gt;&lt;code&gt;2.0.2.RELEASE&lt;/code&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td class="tableblock halign-left valign-top"&gt;&lt;p class="tableblock"&gt;Spring Session Data Redis&lt;/p&gt;&lt;/td&gt;
-&lt;td class="tableblock halign-left valign-top"&gt;&lt;p class="tableblock"&gt;&lt;code&gt;2.0.4.RELEASE&lt;/code&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td class="tableblock halign-left valign-top"&gt;&lt;p class="tableblock"&gt;Spring Session Hazelcast&lt;/p&gt;&lt;/td&gt;
-&lt;td class="tableblock halign-left valign-top"&gt;&lt;p class="tableblock"&gt;&lt;code&gt;2.0.4.RELEASE&lt;/code&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td class="tableblock halign-left valign-top"&gt;&lt;p class="tableblock"&gt;Spring Session JDBC&lt;/p&gt;&lt;/td&gt;
-&lt;td class="tableblock halign-left valign-top"&gt;&lt;p class="tableblock"&gt;&lt;code&gt;2.0.4.RELEASE&lt;/code&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;div class="sect2"&gt;
-&lt;h3 id="spring-session"&gt;&lt;a class="anchor" href="#spring-session"&gt;&lt;/a&gt;Spring Session&lt;/h3&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;The &lt;code&gt;2.0.4.RELEASE&lt;/code&gt; maintenance release contains a couple of bug fixes for Hazelcast and JDBC session stores, as well as dependency upgrades. You can find the complete details of the release in the &lt;a href="https://github.com/spring-projects/spring-session/milestone/37?closed=1"&gt;changelog&lt;/a&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;h1 id="using-the-bom" class="sect0"&gt;&lt;a class="anchor" href="#using-the-bom"&gt;&lt;/a&gt;Using the BOM&lt;/h1&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;With Maven:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="listingblock"&gt;
-&lt;div class="content"&gt;
-&lt;pre class="prettyprint highlight"&gt;&lt;code class="language-xml" data-lang="xml"&gt;&amp;lt;dependencyManagement&amp;gt;
-	&amp;lt;dependencies&amp;gt;
-		&amp;lt;dependency&amp;gt;
-			&amp;lt;groupId&amp;gt;org.springframework.session&amp;lt;/groupId&amp;gt;
-			&amp;lt;artifactId&amp;gt;spring-session-bom&amp;lt;/artifactId&amp;gt;
-			&amp;lt;version&amp;gt;Apple-SR3&amp;lt;/version&amp;gt;
-			&amp;lt;type&amp;gt;pom&amp;lt;/type&amp;gt;
-			&amp;lt;scope&amp;gt;import&amp;lt;/scope&amp;gt;
-		&amp;lt;/dependency&amp;gt;
-	&amp;lt;/dependencies&amp;gt;
-&amp;lt;/dependencyManagement&amp;gt;
-&amp;lt;dependencies&amp;gt;
-	&amp;lt;dependency&amp;gt;
-		&amp;lt;groupId&amp;gt;org.springframework.session&amp;lt;/groupId&amp;gt;
-		&amp;lt;artifactId&amp;gt;spring-session-data-redis&amp;lt;/artifactId&amp;gt;
-	&amp;lt;/dependency&amp;gt;
-	...
-&amp;lt;/dependencies&amp;gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;With Gradle:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="listingblock"&gt;
-&lt;div class="content"&gt;
-&lt;pre class="prettyprint highlight"&gt;&lt;code class="language-gradle" data-lang="gradle"&gt;plugins {
-	id 'io.spring.dependency-management' version '1.0.5.RELEASE'
-}
-
-dependencyManagement {
-	imports {
-		mavenBom 'org.springframework.session:spring-session-bom:Apple-SR3'
-	}
-}
-
-dependencies {
-	compile 'org.springframework.session:spring-session-data-redis'
-	...
-}&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;&lt;a href="https://projects.spring.io/spring-session/"&gt;Project Page&lt;/a&gt;  | &lt;a href="https://docs.spring.io/spring-session/docs/2.0.4.RELEASE/reference/html5/"&gt;Documentation&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-session"&gt;GitHub&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-session/issues"&gt;Issues&lt;/a&gt; | &lt;a href="https://stackoverflow.com/questions/tagged/spring-session"&gt;Stack Overflow&lt;/a&gt; | &lt;a href="https://gitter.im/spring-projects/spring-session"&gt;Gitter&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;</content>
   </entry>
 </feed>
