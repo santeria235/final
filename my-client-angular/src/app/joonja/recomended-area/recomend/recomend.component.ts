@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Card } from '../recomended-area.component';
+import { Card } from '../../../section/section.component';
 
 @Component({
   selector: 'app-recomend',

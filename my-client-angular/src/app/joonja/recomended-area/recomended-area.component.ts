@@ -1,13 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Card } from '../../section/section.component';
 
-export class Card {
-  mainImg : String;
-  profileImg : String;
-  text : String;
-  like : Number;
-  comment : Number;
-  viewCount : Number;
-}
 
 @Component({
   selector: 'app-recomended-area',

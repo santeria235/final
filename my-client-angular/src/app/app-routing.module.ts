@@ -8,12 +8,16 @@ import { FooterComponent } from './footer/footer.component';
 import { CardComponent } from './section/card/card.component';
 import { HeaderComponent } from './header/header.component';
 import { CategoryComponent } from './category/category.component';
-
+import { JoonjaComponent } from './joonja/joonja.component';
+import { RecomendedAreaComponent } from './joonja/recomended-area/recomended-area.component';
+import { PostareaComponent } from './joonja/postarea/postarea.component';
+import { CommentComponent } from './joonja/comment/comment.component';
 
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: 'home', component: HomeComponent }
+  { path: 'home', component: HomeComponent },
+  { path: 'joonja', component: JoonjaComponent },
 
 ];
 
