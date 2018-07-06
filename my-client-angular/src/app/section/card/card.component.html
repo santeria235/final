@@ -4,11 +4,11 @@
 
       <div class="blog-image"><img src="assets/images/{{card.mainImg}}" alt="Blog Image"></div>
 
-      <a class="avatar" [routerLink]="['/joonja']"><img src="assets/images/{{card.profileImg}}" alt="Profile Image"></a>
+      <a class="avatar"><img src="assets/images/{{card.profileImg}}" alt="Profile Image"></a>
 
       <div class="blog-info">
 
-        <h4 class="title"><a href="#"><b>{{card.dp_content}}</b></a></h4>
+        <h4 class="title"><a [routerLink]="['/joonja/{{card.dp_pageno}}']"><b>{{card.dp_content}}</b></a></h4>
 
         <ul class="post-footer">
           <li><a href="#"><i class="ion-heart"></i>{{card.dp_likeCount}}</a></li>

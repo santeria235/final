@@ -16,19 +16,19 @@
               </div>
 
               <div class="middle-area">
-                <a class="name" href="#"><b>게시물작성자</b></a>
-                <h6 class="date">작성일on Sep 29, 2017 at 9:48 am</h6>
+                <a class="name" href="#"><b>{{dp.u_name}}</b></a>
+                <h6 class="date">작성일&nbsp;{{dp.dp_date}}</h6>
               </div>
 
             </div><!-- post-info -->
 
-            <h3 class="title"><a href="#"><b>게시물제목게시물제목게시물제목게시물제목게시물제목게시물제목게시물제목</b></a></h3>
+            <h3 class="title"><a href="#"><b>{{dp.dp_title}}</b></a></h3>
 
-            <p class="para">게시물내용게시물내용게시물내용게시물내용게시물내용게시물내용게시물내용게시물내용게시물내용게시물내용게시물내용게시물내용게시물내용게시물내용게시물내용게시물내용</p>
+            <p class="para">{{dp.dp_content}}</p>
 
             <div class="post-image"><img src="assets/images/blog-1-1000x600.jpg" alt="Blog Image"></div>
 
-            <p class="para">게시물내용게시물내용게시물내용게시물내용게시물내용게시물내용게시물내용게시물내용게시물내용</p>
+            <p class="para">{{dp.dp_content}}</p>
 
             <ul class="tags">
               <li><a href="#">태그Mnual</a></li>
@@ -40,9 +40,9 @@
 
           <div class="post-icons-area">
             <ul class="post-icons">
-              <li><a href="#"><i class="ion-heart"></i>좋아요57</a></li>
-              <li><a href="#"><i class="ion-chatbubble"></i>댓글수6</a></li>
-              <li><a href="#"><i class="ion-eye"></i>조회수138</a></li>
+              <li><a href="#"><i class="ion-heart"></i>좋아요{{dp.dp_likeCount}}</a></li>
+              <li><a href="#"><i class="ion-chatbubble"></i>댓글수{{dp.dp_commentCount}}</a></li>
+              <li><a href="#"><i class="ion-eye"></i>조회수{{dp.dp_viewCount}}</a></li>
             </ul>
 
             <ul class="icons">

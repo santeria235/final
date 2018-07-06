@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Card } from '../../section/section.component';
-
+import { DetailPage } from '../../section/detailpage';
+import { DetailpageHttpService } from '../../detailpage-http.service';
 
 @Component({
   selector: 'app-recomended-area',
@@ -9,18 +9,17 @@ import { Card } from '../../section/section.component';
 })
 export class RecomendedAreaComponent implements OnInit {
 
-  cards : Card[] = [
-    { mainImg:'dmitri-popov-326976.jpg', profileImg:'averie-woodard-319832.jpg', text:'111', like:1 , comment:1, viewCount:1 },
-    { mainImg:'dmitri-popov-326976.jpg', profileImg:'averie-woodard-319832.jpg', text:'111', like:1 , comment:1, viewCount:1 },
-    { mainImg:'dmitri-popov-326976.jpg', profileImg:'averie-woodard-319832.jpg', text:'111', like:1 , comment:1, viewCount:1 },
-    { mainImg:'dmitri-popov-326976.jpg', profileImg:'averie-woodard-319832.jpg', text:'111', like:1 , comment:1, viewCount:1 },
-    { mainImg:'dmitri-popov-326976.jpg', profileImg:'averie-woodard-319832.jpg', text:'111', like:1 , comment:1, viewCount:1 },
-    { mainImg:'dmitri-popov-326976.jpg', profileImg:'averie-woodard-319832.jpg', text:'111', like:1 , comment:1, viewCount:1 }
-  ]
-
-  constructor() { }
+  RecommendedCards : DetailPage[];
+  constructor(private DetailpageHttpService: DetailpageHttpService) { }
 
   ngOnInit() {
+    this.show();
+  }
+
+  show() {
+    this.DetailpageHttpService.findAll().subscribe(res => {
+      this.RecommendedCards = res;
+    });
   }
 
 }

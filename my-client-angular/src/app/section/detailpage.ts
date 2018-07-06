@@ -1,4 +1,5 @@
 export class DetailPage {
+  dp_pageno : number;
   dp_title : string;
   u_name : string;
   dp_category : string;

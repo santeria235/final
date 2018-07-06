@@ -16,4 +16,13 @@ export class DetailpageHttpService {
       })
     );
   }
+
+  findPageByPageNo(pageno) {
+    return this.http.get("http://localhost:8080/detailpages/"+pageno).pipe(
+      map(res => {
+        console.log(res);
+        return res.json();
+      })
+    );
+  }
 }

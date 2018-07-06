@@ -17,7 +17,7 @@ import { CommentComponent } from './joonja/comment/comment.component';
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
-  { path: 'joonja', component: JoonjaComponent },
+  { path: 'joonja/:pageNo', component: JoonjaComponent  },
 
 ];
 

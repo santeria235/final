@@ -14,7 +14,6 @@ import { HomeComponent } from './home/home.component';
 
 import { JoonjaComponent } from './joonja/joonja.component';
 import { RecomendedAreaComponent } from './joonja/recomended-area/recomended-area.component';
-import { RecomendComponent } from './joonja/recomended-area/recomend/recomend.component';
 import { PostareaComponent } from './joonja/postarea/postarea.component';
 import { CommentComponent } from './joonja/comment/comment.component';
 import { PostCommentComponent } from './joonja/comment/post-comment/post-comment.component';
@@ -51,7 +50,6 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     HomeComponent,
     JoonjaComponent,
     RecomendedAreaComponent,
-    RecomendComponent,
     PostareaComponent,
     CommentComponent,
     PostCommentComponent
