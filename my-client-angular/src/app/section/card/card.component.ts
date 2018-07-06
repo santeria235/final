@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Card } from '../section.component';
+import { DetailPage } from '../detailpage';
 
 @Component({
   selector: 'app-card',
@@ -7,7 +7,7 @@ import { Card } from '../section.component';
   styleUrls: ['./card.component.css']
 })
 export class CardComponent implements OnInit {
-@Input('card') card : Card;
+@Input('card') card : DetailPage;
   constructor() { }
 
   ngOnInit() {

@@ -19,7 +19,7 @@ import { PostareaComponent } from './joonja/postarea/postarea.component';
 import { CommentComponent } from './joonja/comment/comment.component';
 import { PostCommentComponent } from './joonja/comment/post-comment/post-comment.component';
 
-
+import { DetailpageHttpService } from './detailpage-http.service';
 
 import { SwiperModule } from 'ngx-swiper-wrapper';
 import { SWIPER_CONFIG } from 'ngx-swiper-wrapper';
@@ -66,7 +66,7 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     {
     provide: SWIPER_CONFIG,
     useValue: DEFAULT_SWIPER_CONFIG
-    }
+  }, DetailpageHttpService
   ],
   bootstrap: [AppComponent]
 })
