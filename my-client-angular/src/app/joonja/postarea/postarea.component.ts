@@ -18,8 +18,10 @@ export class PostareaComponent implements OnInit {
   }
 
   show() {
+
     this.DetailpageHttpService.findPageByPageNo(this.pageNo).subscribe(res => {
       this.dp = res;
+      console.log(this.dp);
     });
   }
 }

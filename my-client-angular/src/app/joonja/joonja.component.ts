@@ -7,12 +7,16 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class JoonjaComponent implements OnInit {
   pageNo : number;
-  constructor(route : ActivatedRoute) {
-    this.pageNo = route.snapshot.params['pageNo'];
-
+  constructor(private route : ActivatedRoute) {
+    // this.pageNo = route.snapshot.params['pageNo'];
    }
 
-  ngOnInit() {
+   ngOnInit(){
+         this.route.params.subscribe((params) => {
+         this.pageNo = params["pageNo"];
+         console.log(this.pageNo);
+         //load record data
+    });
   }
 
 }

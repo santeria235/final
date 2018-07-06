@@ -8,7 +8,7 @@
 
       <div class="blog-info">
 
-        <h4 class="title"><a [routerLink]="['/joonja/{{card.dp_pageno}}']"><b>{{card.dp_content}}</b></a></h4>
+        <h4 class="title"><a [routerLink]="['/joonja', card.dp_pageno]"><b>{{card.dp_content}}</b></a></h4>
 
         <ul class="post-footer">
           <li><a href="#"><i class="ion-heart"></i>{{card.dp_likeCount}}</a></li>

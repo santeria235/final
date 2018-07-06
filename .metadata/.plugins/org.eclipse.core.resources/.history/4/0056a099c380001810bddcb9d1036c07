@@ -1,0 +1,29 @@
+package com.example.t3.detailpage.repository;
+
+import java.util.List;
+
+import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
+import org.apache.ibatis.annotations.Select;
+
+import com.example.t3.board.model.Board;
+import com.example.t3.detailpage.model.DetailPage;
+
+
+@Mapper
+public interface DetailPageMapper {
+
+	public int insert(DetailPage detailPage);
+	public int update(DetailPage detailPage);
+	public int delete(int p_code);
+	
+	@Select("SELECT COUNT(*) FROM t3_product")
+	public int count();
+	
+	@Select("SELECT * FROM t3_product")
+	public List<DetailPage> selectAll();
+	
+//	public Board selectById(long id);
+//	public List<Board> selectByLimit(@Param("page") int page, @Param("size") int size);
+//	public int increment(long id);
+}
