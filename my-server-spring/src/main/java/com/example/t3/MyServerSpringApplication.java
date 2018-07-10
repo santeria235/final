@@ -29,39 +29,36 @@ public class MyServerSpringApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 //		detailPageMapper.insert(new DetailPage(1111, "스타트업 아이디어", "이상오", 
-//				"아이디어", 30000000, 0, "본문컨텐츠내용본문컨텐츠내용본문컨텐츠내용본문컨텐츠내용", "imgLocation", 
-//				"아이디어,창업",0,0,0,new Date()));
-//		detailPageMapper.insert(new DetailPage(2222, "스타트업 아이디어", "이상오", 
-//				"아이디어", 30000000, 0, "본문컨텐츠내용본문컨텐츠내용본문컨텐츠내용본문컨텐츠내용", "imgLocation", 
-//				"아이디어,창업",0,0,0,new Date()));
-//		detailPageMapper.insert(new DetailPage(3333, "스타트업 아이디어", "이상오", 
-//				"아이디어", 30000000, 0, "본문컨텐츠내용본문컨텐츠내용본문컨텐츠내용본문컨텐츠내용", "imgLocation", 
-//				"아이디어,창업",0,0,0,new Date()));
-//		detailPageMapper.insert(new DetailPage(4444, "스타트업 아이디어", "이상오", 
-//				"아이디어", 30000000, 0, "본문컨텐츠내용본문컨텐츠내용본문컨텐츠내용본문컨텐츠내용", "imgLocation", 
-//				"아이디어,창업",0,0,0,new Date()));
-//		detailPageMapper.insert(new DetailPage(5555, "스타트업 아이디어", "이상오", 
-//				"아이디어", 30000000, 0, "본문컨텐츠내용본문컨텐츠내용본문컨텐츠내용본문컨텐츠내용", "imgLocation", 
-//				"아이디어,창업",0,0,0,new Date()));
-//		detailPageMapper.insert(new DetailPage(6666, "스타트업 아이디어", "이상오", 
-//				"아이디어", 30000000, 0, "본문컨텐츠내용본문컨텐츠내용본문컨텐츠내용본문컨텐츠내용", "imgLocation", 
-//				"아이디어,창업",0,0,0,new Date()));
-//		detailPageMapper.insert(new DetailPage(7777, "스타트업 아이디어", "이상오", 
-//				"아이디어", 30000000, 0, "본문컨텐츠내용본문컨텐츠내용본문컨텐츠내용본문컨텐츠내용", "imgLocation", 
-//				"아이디어,창업",0,0,0,new Date()));
-//		private int dp_pageno;
-//	    private String dp_title;
-//	    private String u_name;
-//	    private String dp_category;
-//	    private int dp_goalmoney;
-//	    private int dp_currentmoney;
-//	    private String dp_content;
-//	    private String dp_img;
-//	    private String dp_hashtags;
-//	    private int dp_likeCount;
-//	    private int dp_commentCount;
-//	    private int dp_viewCount;
-//	    private Date dp_date;
+//				2000, 30000000, 0, "본문컨텐츠내용본문컨텐츠내용본문컨텐츠내용본문컨텐츠내용", "imgLocation", 
+//				0,0,0,new Date()));
+//		detailPageMapper.insert(new DetailPage(1111, "스타트업 아이디어", "이상오", 
+//				2000, 30000000, 0, "본문컨텐츠내용본문컨텐츠내용본문컨텐츠내용본문컨텐츠내용", "imgLocation", 
+//				0,0,0,new Date()));
+//		detailPageMapper.insert(new DetailPage(1111, "스타트업 아이디어", "이상오", 
+//				2000, 30000000, 0, "본문컨텐츠내용본문컨텐츠내용본문컨텐츠내용본문컨텐츠내용", "imgLocation", 
+//				0,0,0,new Date()));
+//		detailPageMapper.insert(new DetailPage(1111, "스타트업 아이디어", "이상오", 
+//				2000, 30000000, 0, "본문컨텐츠내용본문컨텐츠내용본문컨텐츠내용본문컨텐츠내용", "imgLocation", 
+//				0,0,0,new Date()));
+//		detailPageMapper.insert(new DetailPage(1111, "스타트업 아이디어", "이상오", 
+//				2000, 30000000, 0, "본문컨텐츠내용본문컨텐츠내용본문컨텐츠내용본문컨텐츠내용", "imgLocation", 
+//				0,0,0,new Date()));
+//		detailPageMapper.insert(new DetailPage(1111, "스타트업 아이디어", "이상오", 
+//				2000, 30000000, 0, "본문컨텐츠내용본문컨텐츠내용본문컨텐츠내용본문컨텐츠내용", "imgLocation", 
+//				0,0,0,new Date()));
+
+//		private int d_pageno;
+//	    private String d_title;
+//	    private String u_id;
+//	    private int c_id;
+//	    private int d_goalmoney;
+//	    private int d_currentmoney;
+//	    private String d_content;
+//	    private String d_img;
+//	    private int d_likeCount;
+//	    private int d_commentCount;
+//	    private int d_viewCount;
+//	    private Date d_date;
 	}
 	
 //	@Autowired

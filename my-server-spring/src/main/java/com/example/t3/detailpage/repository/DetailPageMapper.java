@@ -13,12 +13,12 @@ import com.example.t3.detailpage.model.DetailPage;
 @Mapper
 public interface DetailPageMapper {
 	
-    public String INSERT_DETAIL_PAGE = "INSERT into detailpage(dp_pageno,dp_title,u_name,dp_category,"
-    		+ "dp_goalmoney,dp_currentmoney,dp_content,dp_img,dp_hashtags,dp_likeCount,dp_commentCount,dp_viewCount,dp_date) "
-    		+ "VALUES(#{dp_pageno}, #{dp_title},#{u_name},#{dp_category},#{dp_goalmoney},#{dp_currentmoney},"
-    		+ "#{dp_content},#{dp_img},#{dp_hashtags},#{dp_likeCount},#{dp_commentCount},#{dp_viewCount},#{dp_date})";
+    public String INSERT_DETAIL_PAGE = "INSERT into t3_detailpage(d_pageno,d_title,u_id,c_id,"
+    		+ "d_goalmoney,d_currentmoney,d_content,d_img,d_likeCount,d_commentCount,d_viewCount,d_date) "
+    		+ "VALUES(#{d_pageno}, #{d_title},#{u_id},#{c_id},#{d_goalmoney},#{d_currentmoney},"
+    		+ "#{d_content},#{d_img},#{d_likeCount},#{d_commentCount},#{d_viewCount},#{d_date})";
     
-    public String SELECT_PAGE_BY_PAGENO = "SELECT * FROM detailpage WHERE dp_pageno=#{pageno}";
+    public String SELECT_PAGE_BY_PAGENO = "SELECT * FROM t3_detailpage WHERE d_pageno=#{pageno}";
     
 	@Insert(INSERT_DETAIL_PAGE)
 	public int insert(DetailPage detailPage);
@@ -26,10 +26,10 @@ public interface DetailPageMapper {
 //	public int update(DetailPage detailPage);
 //	public int delete(int p_code);
 //	
-	@Select("SELECT COUNT(*) FROM detailpage")
+	@Select("SELECT COUNT(*) FROM t3_detailpage")
 	public int count();
 	
-	@Select("SELECT * FROM detailpage")
+	@Select("SELECT * FROM t3_detailpage")
 	public List<DetailPage> selectAll();
 	
 	@Select(SELECT_PAGE_BY_PAGENO)
