@@ -1,19 +1,19 @@
 <div class="comment-form">
-  <form method="post">
+  <form (ngSubmit)="insertComment()">
     <div class="row">
 
       <div class="col-sm-6">
         <input type="text" aria-required="true" name="contact-form-name" class="form-control"
-          placeholder="Enter your name" aria-invalid="true" required >
+          placeholder="Enter your name" aria-invalid="true" required [(ngModel)]="comment.c_writer">
       </div>
       <div class="col-sm-6">
         <input type="email" aria-required="true" name="contact-form-email" class="form-control"
-          placeholder="Enter your email" aria-invalid="true" required>
+          placeholder="Enter your email" aria-invalid="true" required [(ngModel)]="comment.c_writer_email">
       </div>
 
       <div class="col-sm-12">
         <textarea name="contact-form-message" rows="2" class="text-area-messge form-control"
-          placeholder="Enter your comment" aria-required="true" aria-invalid="false"></textarea >
+          placeholder="Enter your comment" aria-required="true" aria-invalid="false" [(ngModel)]="c_content"></textarea >
       </div>
       <div class="col-sm-12">
         <button class="submit-btn" type="submit" id="form-submit"><b>POST COMMENT</b></button>

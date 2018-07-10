@@ -31,14 +31,14 @@
     [swiper]="config" [(index)]="index">
     <div class="swiper-wrapper">
 
-      <div class="swiper-slide">
+      <div class="swiper-slide" *ngFor="let c of categories">
         <a class="slider-category" href="#">
           <div class="blog-image"><img src="assets/images/category-1-400x250.jpg" alt="Blog Image"></div>
 
           <div class="category">
             <div class="display-table center-text">
               <div class="display-table-cell">
-                <h3><b>BEAUTY</b></h3>
+                <h3><b>{{c.c_name}}</b></h3>
               </div>
             </div>
           </div>
@@ -47,84 +47,7 @@
       </div>
       <!-- swiper-slide -->
 
-      <div class="swiper-slide">
-        <a class="slider-category" href="#">
-          <div class="blog-image"><img src="assets/images/category-2-400x250.jpg" alt="Blog Image"></div>
 
-          <div class="category">
-            <div class="display-table center-text">
-              <div class="display-table-cell">
-                <h3><b>SPORT</b></h3>
-              </div>
-            </div>
-          </div>
-
-        </a>
-      </div>
-      <!-- swiper-slide -->
-
-      <div class="swiper-slide">
-        <a class="slider-category" href="#">
-          <div class="blog-image"><img src="assets/images/category-3-400x250.jpg" alt="Blog Image"></div>
-
-          <div class="category">
-            <div class="display-table center-text">
-              <div class="display-table-cell">
-                <h3><b>HEALTH</b></h3>
-              </div>
-            </div>
-          </div>
-
-        </a>
-      </div>
-      <!-- swiper-slide -->
-
-      <div class="swiper-slide">
-        <a class="slider-category" href="#">
-          <div class="blog-image"><img src="assets/images/category-4-400x250.jpg" alt="Blog Image"></div>
-
-          <div class="category">
-            <div class="display-table center-text">
-              <div class="display-table-cell">
-                <h3><b>DESIGN</b></h3>
-              </div>
-            </div>
-          </div>
-
-        </a>
-      </div>
-      <!-- swiper-slide -->
-
-      <div class="swiper-slide">
-        <a class="slider-category" href="#">
-          <div class="blog-image"><img src="assets/images/category-5-400x250.jpg" alt="Blog Image"></div>
-
-          <div class="category">
-            <div class="display-table center-text">
-              <div class="display-table-cell">
-                <h3><b>MUSIC</b></h3>
-              </div>
-            </div>
-          </div>
-
-        </a>
-      </div>
-      <!-- swiper-slide -->
-
-      <div class="swiper-slide">
-        <a class="slider-category" href="#">
-          <div class="blog-image"><img src="assets/images/category-6-400x250.jpg" alt="Blog Image"></div>
-
-          <div class="category">
-            <div class="display-table center-text">
-              <div class="display-table-cell">
-                <h3><b>MOVIE</b></h3>
-              </div>
-            </div>
-          </div>
-
-        </a>
-      </div>
       <!-- swiper-slide -->
 
     </div>

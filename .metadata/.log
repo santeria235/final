@@ -331,3 +331,283 @@ This warning can be switched off on the Team > Git > Confirmations and Warnings 
 
 !ENTRY org.eclipse.jface.text 2 0 2018-07-10 14:04:30.952
 !MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.jface.text 2 0 2018-07-10 14:07:44.873
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2018-07-10 14:07:44.873
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2018-07-10 14:19:10.796
+!MESSAGE Connection to http://dist.springsource.com/release/STS/doc/updates.xml failed on dist.springsource.com. Retry attempt 0 started
+!STACK 0
+java.net.UnknownHostException: dist.springsource.com
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:928)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1323)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1276)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1192)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1126)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.resolveHostname(DefaultClientConnectionOperator.java:262)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:161)
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144)
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:134)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:612)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:447)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:884)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1084)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1075)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1071)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:74)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2018-07-10 14:19:12.047
+!MESSAGE Connection to https://spring.io/blog.atom failed on spring.io. Retry attempt 0 started
+!STACK 0
+java.net.UnknownHostException: spring.io
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:928)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1323)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1276)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1192)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1126)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.resolveHostname(DefaultClientConnectionOperator.java:262)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:161)
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144)
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:134)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:612)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:447)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:884)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1084)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1075)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1071)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:74)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY net.harawata.mybatipse 4 0 2018-07-10 16:27:41.307
+!MESSAGE Error while checking type hierarchy of ShoppingMallApiApplication and org.mybatis.guice.MyBatisModule
+
+!ENTRY net.harawata.mybatipse 4 0 2018-07-10 16:27:41.517
+!MESSAGE Error while checking type hierarchy of AdminController and org.mybatis.guice.MyBatisModule
+
+!ENTRY net.harawata.mybatipse 4 0 2018-07-10 16:27:41.518
+!MESSAGE Error while checking type hierarchy of Admin and org.mybatis.guice.MyBatisModule
+
+!ENTRY net.harawata.mybatipse 4 0 2018-07-10 16:27:41.519
+!MESSAGE Error while checking type hierarchy of AdminMapper and org.mybatis.guice.MyBatisModule
+
+!ENTRY net.harawata.mybatipse 4 0 2018-07-10 16:27:41.519
+!MESSAGE Error while checking type hierarchy of AdminService and org.mybatis.guice.MyBatisModule
+
+!ENTRY net.harawata.mybatipse 4 0 2018-07-10 16:27:41.521
+!MESSAGE Error while checking type hierarchy of AdminServiceImpl and org.mybatis.guice.MyBatisModule
+
+!ENTRY net.harawata.mybatipse 4 0 2018-07-10 16:27:41.522
+!MESSAGE Error while checking type hierarchy of FileController and org.mybatis.guice.MyBatisModule
+
+!ENTRY net.harawata.mybatipse 4 0 2018-07-10 16:27:41.523
+!MESSAGE Error while checking type hierarchy of FileStorageException and org.mybatis.guice.MyBatisModule
+
+!ENTRY net.harawata.mybatipse 4 0 2018-07-10 16:27:41.523
+!MESSAGE Error while checking type hierarchy of MyFileNotFoundException and org.mybatis.guice.MyBatisModule
+
+!ENTRY net.harawata.mybatipse 4 0 2018-07-10 16:27:41.524
+!MESSAGE Error while checking type hierarchy of UploadFileResponse and org.mybatis.guice.MyBatisModule
+
+!ENTRY net.harawata.mybatipse 4 0 2018-07-10 16:27:41.525
+!MESSAGE Error while checking type hierarchy of FileStorageProperties and org.mybatis.guice.MyBatisModule
+
+!ENTRY net.harawata.mybatipse 4 0 2018-07-10 16:27:41.526
+!MESSAGE Error while checking type hierarchy of FileStorageService and org.mybatis.guice.MyBatisModule
+
+!ENTRY net.harawata.mybatipse 4 0 2018-07-10 16:27:41.527
+!MESSAGE Error while checking type hierarchy of LoginController and org.mybatis.guice.MyBatisModule
+
+!ENTRY net.harawata.mybatipse 4 0 2018-07-10 16:27:41.527
+!MESSAGE Error while checking type hierarchy of SecurityConfig and org.mybatis.guice.MyBatisModule
+
+!ENTRY net.harawata.mybatipse 4 0 2018-07-10 16:27:41.556
+!MESSAGE Error while checking type hierarchy of Login and org.mybatis.guice.MyBatisModule
+
+!ENTRY net.harawata.mybatipse 4 0 2018-07-10 16:27:41.558
+!MESSAGE Error while checking type hierarchy of User and org.mybatis.guice.MyBatisModule
+
+!ENTRY net.harawata.mybatipse 4 0 2018-07-10 16:27:41.559
+!MESSAGE Error while checking type hierarchy of LoginMapper and org.mybatis.guice.MyBatisModule
+
+!ENTRY net.harawata.mybatipse 4 0 2018-07-10 16:27:41.560
+!MESSAGE Error while checking type hierarchy of LoginService and org.mybatis.guice.MyBatisModule
+
+!ENTRY net.harawata.mybatipse 4 0 2018-07-10 16:27:41.561
+!MESSAGE Error while checking type hierarchy of CartController and org.mybatis.guice.MyBatisModule
+
+!ENTRY net.harawata.mybatipse 4 0 2018-07-10 16:27:41.562
+!MESSAGE Error while checking type hierarchy of OrderController and org.mybatis.guice.MyBatisModule
+
+!ENTRY net.harawata.mybatipse 4 0 2018-07-10 16:27:41.563
+!MESSAGE Error while checking type hierarchy of Cart and org.mybatis.guice.MyBatisModule
+
+!ENTRY net.harawata.mybatipse 4 0 2018-07-10 16:27:41.564
+!MESSAGE Error while checking type hierarchy of Order and org.mybatis.guice.MyBatisModule
+
+!ENTRY net.harawata.mybatipse 4 0 2018-07-10 16:27:41.565
+!MESSAGE Error while checking type hierarchy of OrderWriter and org.mybatis.guice.MyBatisModule
+
+!ENTRY net.harawata.mybatipse 4 0 2018-07-10 16:27:41.566
+!MESSAGE Error while checking type hierarchy of Order_Detail and org.mybatis.guice.MyBatisModule
+
+!ENTRY net.harawata.mybatipse 4 0 2018-07-10 16:27:41.567
+!MESSAGE Error while checking type hierarchy of CartMapper and org.mybatis.guice.MyBatisModule
+
+!ENTRY net.harawata.mybatipse 4 0 2018-07-10 16:27:41.593
+!MESSAGE Error while checking type hierarchy of CartService and org.mybatis.guice.MyBatisModule
+
+!ENTRY net.harawata.mybatipse 4 0 2018-07-10 16:27:41.594
+!MESSAGE Error while checking type hierarchy of OrderMapper and org.mybatis.guice.MyBatisModule
+
+!ENTRY net.harawata.mybatipse 4 0 2018-07-10 16:27:41.595
+!MESSAGE Error while checking type hierarchy of OrderService and org.mybatis.guice.MyBatisModule
+
+!ENTRY net.harawata.mybatipse 4 0 2018-07-10 16:27:41.596
+!MESSAGE Error while checking type hierarchy of kimWebsquareController and org.mybatis.guice.MyBatisModule
+
+!ENTRY net.harawata.mybatipse 4 0 2018-07-10 16:27:41.597
+!MESSAGE Error while checking type hierarchy of JoinController and org.mybatis.guice.MyBatisModule
+
+!ENTRY net.harawata.mybatipse 4 0 2018-07-10 16:27:41.598
+!MESSAGE Error while checking type hierarchy of JoinMapper and org.mybatis.guice.MyBatisModule
+
+!ENTRY net.harawata.mybatipse 4 0 2018-07-10 16:27:41.599
+!MESSAGE Error while checking type hierarchy of JoinService and org.mybatis.guice.MyBatisModule
+
+!ENTRY net.harawata.mybatipse 4 0 2018-07-10 16:27:41.601
+!MESSAGE Error while checking type hierarchy of UserController and org.mybatis.guice.MyBatisModule
+
+!ENTRY net.harawata.mybatipse 4 0 2018-07-10 16:27:41.602
+!MESSAGE Error while checking type hierarchy of UserMapper and org.mybatis.guice.MyBatisModule
+
+!ENTRY net.harawata.mybatipse 4 0 2018-07-10 16:27:41.604
+!MESSAGE Error while checking type hierarchy of UserService and org.mybatis.guice.MyBatisModule
+
+!ENTRY net.harawata.mybatipse 4 0 2018-07-10 16:27:41.605
+!MESSAGE Error while checking type hierarchy of MainController and org.mybatis.guice.MyBatisModule
+
+!ENTRY net.harawata.mybatipse 4 0 2018-07-10 16:27:41.605
+!MESSAGE Error while checking type hierarchy of Faq and org.mybatis.guice.MyBatisModule
+
+!ENTRY net.harawata.mybatipse 4 0 2018-07-10 16:27:41.606
+!MESSAGE Error while checking type hierarchy of Notice and org.mybatis.guice.MyBatisModule
+
+!ENTRY net.harawata.mybatipse 4 0 2018-07-10 16:27:41.607
+!MESSAGE Error while checking type hierarchy of Products and org.mybatis.guice.MyBatisModule
+
+!ENTRY net.harawata.mybatipse 4 0 2018-07-10 16:27:41.608
+!MESSAGE Error while checking type hierarchy of Qna and org.mybatis.guice.MyBatisModule
+
+!ENTRY net.harawata.mybatipse 4 0 2018-07-10 16:27:41.609
+!MESSAGE Error while checking type hierarchy of FaqMapper and org.mybatis.guice.MyBatisModule
+
+!ENTRY net.harawata.mybatipse 4 0 2018-07-10 16:27:41.610
+!MESSAGE Error while checking type hierarchy of NoticeMapper and org.mybatis.guice.MyBatisModule
+
+!ENTRY net.harawata.mybatipse 4 0 2018-07-10 16:27:41.611
+!MESSAGE Error while checking type hierarchy of ProductMapper and org.mybatis.guice.MyBatisModule
+
+!ENTRY net.harawata.mybatipse 4 0 2018-07-10 16:27:41.612
+!MESSAGE Error while checking type hierarchy of QnaMapper and org.mybatis.guice.MyBatisModule
+
+!ENTRY net.harawata.mybatipse 4 0 2018-07-10 16:27:41.613
+!MESSAGE Error while checking type hierarchy of FaqService and org.mybatis.guice.MyBatisModule
+
+!ENTRY net.harawata.mybatipse 4 0 2018-07-10 16:27:41.614
+!MESSAGE Error while checking type hierarchy of FaqServiceImpl and org.mybatis.guice.MyBatisModule
+
+!ENTRY net.harawata.mybatipse 4 0 2018-07-10 16:27:41.615
+!MESSAGE Error while checking type hierarchy of NoticeService and org.mybatis.guice.MyBatisModule
+
+!ENTRY net.harawata.mybatipse 4 0 2018-07-10 16:27:41.616
+!MESSAGE Error while checking type hierarchy of NoticeServiceImpl and org.mybatis.guice.MyBatisModule
+
+!ENTRY net.harawata.mybatipse 4 0 2018-07-10 16:27:41.617
+!MESSAGE Error while checking type hierarchy of ProductService and org.mybatis.guice.MyBatisModule
+
+!ENTRY net.harawata.mybatipse 4 0 2018-07-10 16:27:41.617
+!MESSAGE Error while checking type hierarchy of ProductServiceImpl and org.mybatis.guice.MyBatisModule
+
+!ENTRY net.harawata.mybatipse 4 0 2018-07-10 16:27:41.618
+!MESSAGE Error while checking type hierarchy of QnaService and org.mybatis.guice.MyBatisModule
+
+!ENTRY net.harawata.mybatipse 4 0 2018-07-10 16:27:41.619
+!MESSAGE Error while checking type hierarchy of QnaServiceImpl and org.mybatis.guice.MyBatisModule
+
+!ENTRY net.harawata.mybatipse 4 0 2018-07-10 16:27:41.620
+!MESSAGE Error while checking type hierarchy of ProductQnaController and org.mybatis.guice.MyBatisModule
+
+!ENTRY net.harawata.mybatipse 4 0 2018-07-10 16:27:41.621
+!MESSAGE Error while checking type hierarchy of ProductQna and org.mybatis.guice.MyBatisModule
+
+!ENTRY net.harawata.mybatipse 4 0 2018-07-10 16:27:41.622
+!MESSAGE Error while checking type hierarchy of ProductQnaMapper and org.mybatis.guice.MyBatisModule
+
+!ENTRY net.harawata.mybatipse 4 0 2018-07-10 16:27:41.623
+!MESSAGE Error while checking type hierarchy of ProductQnaService and org.mybatis.guice.MyBatisModule
+
+!ENTRY net.harawata.mybatipse 4 0 2018-07-10 16:27:41.624
+!MESSAGE Error while checking type hierarchy of ProductQnaServiceImpl and org.mybatis.guice.MyBatisModule
+
+!ENTRY net.harawata.mybatipse 4 0 2018-07-10 16:27:41.624
+!MESSAGE Error while checking type hierarchy of ReviewController and org.mybatis.guice.MyBatisModule
+
+!ENTRY net.harawata.mybatipse 4 0 2018-07-10 16:27:41.625
+!MESSAGE Error while checking type hierarchy of ReviewNotFoundException and org.mybatis.guice.MyBatisModule
+
+!ENTRY net.harawata.mybatipse 4 0 2018-07-10 16:27:41.626
+!MESSAGE Error while checking type hierarchy of Review and org.mybatis.guice.MyBatisModule
+
+!ENTRY net.harawata.mybatipse 4 0 2018-07-10 16:27:41.627
+!MESSAGE Error while checking type hierarchy of ReviewMapper and org.mybatis.guice.MyBatisModule
+
+!ENTRY net.harawata.mybatipse 4 0 2018-07-10 16:27:41.628
+!MESSAGE Error while checking type hierarchy of ReviewService and org.mybatis.guice.MyBatisModule
+
+!ENTRY net.harawata.mybatipse 4 0 2018-07-10 16:27:41.629
+!MESSAGE Error while checking type hierarchy of ReviewServiceImpl and org.mybatis.guice.MyBatisModule
+
+!ENTRY net.harawata.mybatipse 4 0 2018-07-10 16:27:41.629
+!MESSAGE Error while checking type hierarchy of ProductCodeMaker and org.mybatis.guice.MyBatisModule
+
+!ENTRY net.harawata.mybatipse 4 0 2018-07-10 16:27:43.578
+!MESSAGE Error while checking type hierarchy of ShoppingMallApiApplicationTests and org.mybatis.guice.MyBatisModule
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2018-07-10 16:30:37.523
+!MESSAGE Could not download sources for antlr:antlr:2.7.7
+!STACK 1
+org.eclipse.core.runtime.CoreException: Could not resolve artifact antlr:antlr:jar:sources:2.7.7
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl$5.call(MavenImpl.java:776)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl$5.call(MavenImpl.java:1)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:177)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:112)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:99)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:743)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:720)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.download(DownloadSourcesJob.java:264)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadAttachments(DownloadSourcesJob.java:243)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadMaven(DownloadSourcesJob.java:217)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.run(DownloadSourcesJob.java:161)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob$1.call(DownloadSourcesJob.java:137)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob$1.call(DownloadSourcesJob.java:1)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:177)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:151)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:99)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.execute(MavenImpl.java:1355)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.run(DownloadSourcesJob.java:135)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+Contains: Missing antlr:antlr:jar:sources:2.7.7
+!SUBENTRY 1 org.eclipse.m2e.core 4 -1 2018-07-10 16:30:37.649
+!MESSAGE Could not resolve artifact antlr:antlr:jar:sources:2.7.7
+!SUBENTRY 2 org.eclipse.m2e.core 4 -1 2018-07-10 16:30:37.649
+!MESSAGE Missing antlr:antlr:jar:sources:2.7.7

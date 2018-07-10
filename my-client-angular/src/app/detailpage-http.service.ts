@@ -8,10 +8,13 @@ export class DetailpageHttpService {
 
   constructor(private http: Http) { }
 
+
   findAll() {
     return this.http.get("http://localhost:8080/detailpages").pipe(
       map(res => {
-        console.log(res);
+        console.log('--------------------');
+        console.log(JSON.stringify(res.json()));
+        console.log('--------------------');
         return res.json();
       })
     );
@@ -25,4 +28,8 @@ export class DetailpageHttpService {
       })
     );
   }
+
+  // incremnetLikeCount(pageno) {
+  //   return this.http.put("http://localhost:8080/detailpages/"+pageno)
+  // }
 }

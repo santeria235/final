@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+
+
 
 @Component({
   selector: 'app-post-comment',
@@ -11,5 +13,12 @@ export class PostCommentComponent implements OnInit {
 
   ngOnInit() {
   }
+
+  // insertComment(){
+  //   this.commentService.insertComment(this.comment)
+  //     .subscribe(() => {
+  //       this.router.navigate(['/products/product', this.productQna.p_code]);
+  //     });
+  // }
 
 }

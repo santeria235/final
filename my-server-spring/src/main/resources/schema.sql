@@ -11,9 +11,9 @@ CREATE TABLE t3_user
 
 drop table t3_investinfo;
 CREATE TABLE t3_investinfo(
-    `i_id`         INT           NOT NULL AUTO_INCREMENT    COMMENT '순번', 
-    `u_id`         VARCHAR(50)   NOT NULL                   COMMENT '유저아이디', 
-    `d_pageno`    INT           NOT NULL                   COMMENT '페이지번호', 
+    `i_id`           INT            NOT NULL AUTO_INCREMENT    COMMENT '순번', 
+    `u_id`           VARCHAR(50)    NOT NULL                   COMMENT '유저아이디', 
+    `d_pageno`       INT            NOT NULL                   COMMENT '페이지번호', 
     `i_investmoney`  INT			   NOT NULL DEFAULT 0		   COMMENT '투자금액', 
     PRIMARY KEY (i_id),
     FOREIGN KEY (`u_id`) REFERENCES `t3_user`(`u_id`),
@@ -21,9 +21,9 @@ CREATE TABLE t3_investinfo(
 );
 
 CREATE TABLE t3_detailpage_hashtags(
-    `h_id`            INT        AUTO_INCREMENT    COMMENT '순번' ,
-    `d_pageno`       INT           NOT NULL    COMMENT '페이지번호', 
-    `hashtag`      VARCHAR(20)      NOT NULL    COMMENT '해쉬태그', 
+    `h_id`            INT        AUTO_INCREMENT              COMMENT '순번' ,
+    `d_pageno`        INT                        NOT NULL    COMMENT '페이지번호', 
+    `hashtag`         VARCHAR(20)                NOT NULL    COMMENT '해쉬태그', 
     PRIMARY KEY (h_id),
     FOREIGN KEY (`d_pageno`) REFERENCES `t3_detailpage`(`d_pageno`)
 );
@@ -36,8 +36,8 @@ CREATE TABLE t3_categories
     PRIMARY KEY (c_id)
 );
 
-
-drop table detailpage;
+SET foreign_key_checks = 0;
+drop table t3_detailpage;
 CREATE TABLE t3_detailpage
 (
     `d_pageno`       INT    AUTO_INCREMENT NOT NULL    COMMENT '페이지번호', 
@@ -58,6 +58,34 @@ CREATE TABLE t3_detailpage
 );
 
 
+CREATE TABLE t3_detailpage_comment
+(
+    `dc_id`       INT     NOT NULL    AUTO_INCREMENT COMMENT '순번', 
+    `d_pageno`    INT     NOT NULL                   COMMENT '상세페이지번호',
+    `c_no`        INT     NOT NULL                   COMMENT '코멘트 번호',	
+    PRIMARY KEY (dc_id),
+    FOREIGN KEY (`d_pageno`) REFERENCES `t3_detailpage`(`d_pageno`),
+    FOREIGN KEY (`c_no`) REFERENCES `t3_comment`(`c_no`)      
+);
+
+Insert into t3_detailpage_comment Values(0,1,1);
+Insert into t3_detailpage_comment Values(0,1,2);
+Insert into t3_detailpage_comment Values(0,2,3);
+Insert into t3_detailpage_comment Values(0,2,4);
+Insert into t3_detailpage_comment Values(0,2,5);
+
+SELECT * FROM t3_comment WHERE (SELECT c_no FROM t3_detailpage_comment dc WHERE dc.d_pageno = 1) = t3_comment.c_no;
+
+select c.c_no, c.c_writer, c.c_writer_email, c.c_content, c.c_date FROM(
+select a.d_pageno, a.c_no, b.c_writer, b.c_writer_email, b.c_content, b.c_date
+from t3_detailpage_comment a, t3_comment b 
+where a.c_no=b.c_no
+) c
+where c.d_pageno = 1;
+
+
+
+
 SET foreign_key_checks = 0;
 drop table tm_comment;
 
@@ -73,6 +101,18 @@ CREATE TABLE t3_comment
     `c_date`           DATE          DEFAULT now() NOT NULL                   COMMENT '작성일시', 
     PRIMARY KEY (c_no)
 ); 
+
+
+Insert into t3_comment Values(0,"이상오","santeria235@gmail.com","안녕안녕",now());
+Insert into t3_comment Values(0,"레골라스","santeria235@gmail.com","안녕안녕",now());
+Insert into t3_comment Values(0,"김리","santeria235@gmail.com","안녕안녕",now());
+Insert into t3_comment Values(0,"간달프","santeria235@gmail.com","안녕안녕",now());
+Insert into t3_comment Values(0,"프로도","santeria235@gmail.com","안녕안녕",now());
+select * from t3_comment;
+delete * from t3_comment;
+
+SET foreign_key_checks = 0;
+drop table t3_comment;
 
 CREATE TABLE t3_reply
 (
@@ -99,10 +139,10 @@ Insert into t3_categories(c_id,c_name) Values(600,'기타');
 
 insert into t3_user values('santeria235@gmail.com','1234','이상오','temp','T');
 
-insert into t3_detialpage
-values(1, '제목','santeria235@gmail.com',100,30000000,0,
+insert into t3_detailpage
+values(null, '제목','santeria235@gmail.com',100,30000000,0,
 '내용이 오는 자리 내용이 오는 자리 내용이 오는 자리 내용이 오는 자리 내용이 오는 자리 내용이 오는 자리',
-'이미지url',0,0,0,CURRENT_TIMESTAMP());
+'이미지url',0,0,0,now());
     `d_pageno`       INT                  NOT NULL    COMMENT '페이지번호', 
     `d_title`        VARCHAR(20)          NOT NULL    COMMENT '상품명', 
     `u_id`           VARCHAR(50)          NOT NULL    COMMENT '작성자 이메일(계정)',  
@@ -119,3 +159,4 @@ values(1, '제목','santeria235@gmail.com',100,30000000,0,
     FOREIGN KEY (`c_id`) REFERENCES `t3_categories`(`c_id`),
     FOREIGN KEY (`u_id`) REFERENCES `t3_user`(`u_id`)
     
+select * from t3_detailpage;

@@ -17,12 +17,16 @@ import { RecomendedAreaComponent } from './joonja/recomended-area/recomended-are
 import { PostareaComponent } from './joonja/postarea/postarea.component';
 import { CommentComponent } from './joonja/comment/comment.component';
 import { PostCommentComponent } from './joonja/comment/post-comment/post-comment.component';
+import { CommentCardComponent } from './joonja/comment/comment-card/comment-card.component';
 
 import { DetailpageHttpService } from './detailpage-http.service';
+import { CategoryHttpService } from './service/category-http.service'
+import { CommentService } from './service/comment.service'
 
 import { SwiperModule } from 'ngx-swiper-wrapper';
 import { SWIPER_CONFIG } from 'ngx-swiper-wrapper';
 import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
+
 
 
 
@@ -52,7 +56,8 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     RecomendedAreaComponent,
     PostareaComponent,
     CommentComponent,
-    PostCommentComponent
+    PostCommentComponent,
+    CommentCardComponent
 
 
   ],
@@ -64,7 +69,7 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     {
     provide: SWIPER_CONFIG,
     useValue: DEFAULT_SWIPER_CONFIG
-  }, DetailpageHttpService
+  }, DetailpageHttpService, CategoryHttpService, CommentService
   ],
   bootstrap: [AppComponent]
 })

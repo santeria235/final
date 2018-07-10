@@ -16,19 +16,20 @@
               </div>
 
               <div class="middle-area">
-                <a class="name" href="#"><b>{{dp.u_id}}&nbsp;</b></a>
-                <h6 class="date">작성일&nbsp;{{dp.d_date}}</h6>
+                <a class="name" href="#"><b>{{detailPage.u_id}}&nbsp;</b></a>
+                <h6 class="date">작성일&nbsp;{{detailPage.d_date}}</h6>
               </div>
 
-            </div><!-- post-info -->
+            </div>
+            <!-- post-info -->
 
-            <h3 class="title"><a href="#"><b>{{dp.d_title}}</b></a></h3>
+            <h3 class="title"><a href="#"><b>{{detailPage.d_title}}</b></a></h3>
 
-            <p class="para">{{dp.d_content}}</p>
+            <p class="para">{{detailPage.d_content}}</p>
 
             <div class="post-image"><img src="assets/images/blog-1-1000x600.jpg" alt="Blog Image"></div>
 
-            <p class="para">{{dp.d_content}}</p>
+            <p class="para">{{detailPage.d_content}}</p>
 
             <ul class="tags">
               <li><a href="#">태그Mnual</a></li>
@@ -36,13 +37,14 @@
               <li><a href="#">태그Recommendation</a></li>
               <li><a href="#">태그Inspiration</a></li>
             </ul>
-          </div><!-- blog-post-inner -->
+          </div>
+          <!-- blog-post-inner -->
 
           <div class="post-icons-area">
             <ul class="post-icons">
-              <li><a href="#"><i class="ion-heart"></i>좋아요{{dp.d_likeCount}}</a></li>
-              <li><a href="#"><i class="ion-chatbubble"></i>댓글수{{dp.d_commentCount}}</a></li>
-              <li><a href="#"><i class="ion-eye"></i>조회수{{dp.d_viewCount}}</a></li>
+              <li><a href="#"><i class="ion-heart"></i>좋아요{{detailPage.d_likeCount}}</a></li>
+              <li><a href="#"><i class="ion-chatbubble"></i>댓글수{{detailPage.d_commentCount}}</a></li>
+              <li><a href="#"><i class="ion-eye"></i>조회수{{detailPage.d_viewCount}}</a></li>
             </ul>
 
             <ul class="icons">
@@ -65,19 +67,24 @@
             </div>
 
 
-          </div><!-- post-info -->
+          </div>
+          <!-- post-info -->
 
 
-        </div><!-- main-post -->
-      </div><!-- col-lg-8 col-md-12 -->
+        </div>
+        <!-- main-post -->
+      </div>
+      <!-- col-lg-8 col-md-12 -->
 
       <div class="col-lg-4 col-md-12 no-left-padding">
 
         <div class="single-post info-area">
 
           <div class="sidebar-area about-area">
-            <h4 class="title"><b>ABOUT BONA</b></h4>
-            <p>오른쪽사이드첫번째오른쪽사이드첫번째오른쪽사이드첫번째오른쪽사이드첫번째오른쪽사이드첫번째</p>
+            <h4 class="title"><b>펀딩 현황</b></h4>
+            <p>목표 펀딩액 : {{detailPage.d_goalmoney}}</p><br />
+            <p>현재 펀딩액 : {{detailPage.d_currentmoney}}</p><br />
+
           </div>
 
           <div class="sidebar-area subscribe-area">
@@ -90,7 +97,8 @@
               </form>
             </div>
 
-          </div><!-- subscribe-area -->
+          </div>
+          <!-- subscribe-area -->
 
           <div class="tag-area">
 
@@ -106,13 +114,19 @@
               <li><a href="#">Interpritation</a></li>
             </ul>
 
-          </div><!-- subscribe-area -->
+          </div>
+          <!-- subscribe-area -->
 
-        </div><!-- info-area -->
+        </div>
+        <!-- info-area -->
 
-      </div><!-- col-lg-4 col-md-12 -->
+      </div>
+      <!-- col-lg-4 col-md-12 -->
 
-    </div><!-- row -->
+    </div>
+    <!-- row -->
 
-  </div><!-- container -->
-</section><!-- post-area -->
+  </div>
+  <!-- container -->
+</section>
+<!-- post-area -->

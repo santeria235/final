@@ -14,6 +14,7 @@
 	</section>
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="C:\java\ShoppingMallAPI-master\ShoppingMallAPI-master"/>
 			<item value="C:\java\project\spring-boot-mybatis-board-h2"/>
 		</list>
 		<list key="projectNameTemplate">

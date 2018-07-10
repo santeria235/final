@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aop-reference-model>
 <aop-project name="my-server-spring"/>
+<aop-project name="spring-boot-mybatis-board-h2"/>
+<aop-project name="ShoppingMallAPI"/>
 </aop-reference-model>
