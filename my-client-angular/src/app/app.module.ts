@@ -16,7 +16,6 @@ import { JoonjaComponent } from './joonja/joonja.component';
 import { RecomendedAreaComponent } from './joonja/recomended-area/recomended-area.component';
 import { PostareaComponent } from './joonja/postarea/postarea.component';
 import { CommentComponent } from './joonja/comment/comment.component';
-import { PostCommentComponent } from './joonja/comment/post-comment/post-comment.component';
 import { CommentCardComponent } from './joonja/comment/comment-card/comment-card.component';
 
 import { DetailpageHttpService } from './detailpage-http.service';
@@ -56,7 +55,6 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     RecomendedAreaComponent,
     PostareaComponent,
     CommentComponent,
-    PostCommentComponent,
     CommentCardComponent
 
 

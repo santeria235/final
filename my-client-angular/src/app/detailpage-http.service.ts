@@ -12,9 +12,6 @@ export class DetailpageHttpService {
   findAll() {
     return this.http.get("http://localhost:8080/detailpages").pipe(
       map(res => {
-        console.log('--------------------');
-        console.log(JSON.stringify(res.json()));
-        console.log('--------------------');
         return res.json();
       })
     );
@@ -23,7 +20,6 @@ export class DetailpageHttpService {
   findPageByPageNo(pageno) {
     return this.http.get("http://localhost:8080/detailpages/"+pageno).pipe(
       map(res => {
-        console.log(res);
         return res.json();
       })
     );

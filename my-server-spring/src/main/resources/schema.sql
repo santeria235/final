@@ -57,22 +57,7 @@ CREATE TABLE t3_detailpage
     FOREIGN KEY (`u_id`) REFERENCES `t3_user`(`u_id`)
 );
 
-
-CREATE TABLE t3_detailpage_comment
-(
-    `dc_id`       INT     NOT NULL    AUTO_INCREMENT COMMENT '순번', 
-    `d_pageno`    INT     NOT NULL                   COMMENT '상세페이지번호',
-    `c_no`        INT     NOT NULL                   COMMENT '코멘트 번호',	
-    PRIMARY KEY (dc_id),
-    FOREIGN KEY (`d_pageno`) REFERENCES `t3_detailpage`(`d_pageno`),
-    FOREIGN KEY (`c_no`) REFERENCES `t3_comment`(`c_no`)      
-);
-
-Insert into t3_detailpage_comment Values(0,1,1);
-Insert into t3_detailpage_comment Values(0,1,2);
-Insert into t3_detailpage_comment Values(0,2,3);
-Insert into t3_detailpage_comment Values(0,2,4);
-Insert into t3_detailpage_comment Values(0,2,5);
+drop table t3_detailpage_comment;
 
 SELECT * FROM t3_comment WHERE (SELECT c_no FROM t3_detailpage_comment dc WHERE dc.d_pageno = 1) = t3_comment.c_no;
 
@@ -87,19 +72,21 @@ where c.d_pageno = 1;
 
 
 SET foreign_key_checks = 0;
-drop table tm_comment;
+drop table t3_comment;
 
 SET foreign_key_checks = 0;
-drop table tm_reply;
+drop table t3_reply;
 
 CREATE TABLE t3_comment
 (
     `c_no`             INT                         NOT NULL    AUTO_INCREMENT COMMENT '게시글번호', 
+    `d_pageno`         INT                         NOT NULL                   COMMENT '페이지번호', 
     `c_writer`         VARCHAR(20)                 NOT NULL                   COMMENT '작성자', 
     `c_writer_email`   VARCHAR(200)                NOT NULL                   COMMENT '작성자 이메일', 
     `c_content`        VARCHAR(4000)               NOT NULL                   COMMENT '내용', 
-    `c_date`           DATE          DEFAULT now() NOT NULL                   COMMENT '작성일시', 
+    `c_date`           DATE          DEFAULT now()                            COMMENT '작성일시', 
     PRIMARY KEY (c_no)
+    FOREIGN KEY (`d_pageno`) REFERENCES `t3_detailpage`(`d_pageno`)
 ); 
 
 
@@ -111,9 +98,17 @@ Insert into t3_comment Values(0,"프로도","santeria235@gmail.com","안녕안�
 select * from t3_comment;
 delete * from t3_comment;
 
-SET foreign_key_checks = 0;
-drop table t3_comment;
+Insert into t3_reply Values(1,"이상오","santeria235@gmail.com","안녕안녕",now());
+Insert into t3_reply Values(1,"레골라스","santeria235@gmail.com","안녕안녕",now());
+Insert into t3_reply Values(2,"김리","santeria235@gmail.com","안녕안녕",now());
+Insert into t3_reply Values(2,"간달프","santeria235@gmail.com","안녕안녕",now());
+Insert into t3_reply Values(2,"프로도","santeria235@gmail.com","안녕안녕",now());
 
+SET foreign_key_checks = 0;
+
+drop table t3_comment;
+select * from t3_reply;
+drop table t3_reply;
 CREATE TABLE t3_reply
 (
     `c_no`             INT                         NOT NULL                   COMMENT '게시글번호', 
@@ -121,7 +116,7 @@ CREATE TABLE t3_reply
     `r_writer_email`   VARCHAR(200)                NOT NULL                   COMMENT '작성자 이메일', 
     `r_content`        VARCHAR(4000)               NOT NULL                   COMMENT '내용', 
     `r_date`           DATE          DEFAULT now() NOT NULL                   COMMENT '작성일시', 
-	 FOREIGN KEY (`c_no`) REFERENCES `tm_comment`(`c_no`)
+	 FOREIGN KEY (`c_no`) REFERENCES `t3_comment`(`c_no`)
 ); 
 
 

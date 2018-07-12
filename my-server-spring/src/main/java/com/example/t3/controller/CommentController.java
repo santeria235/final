@@ -21,6 +21,9 @@ import com.example.t3.comment.repository.CommentMapper;
 @RequestMapping("/comment")
 @CrossOrigin(origins = "http://localhost:4200") 
 public class CommentController {
+	
+	int c_no;
+	
 	@Autowired
 	private CommentMapper commentMapper;
 	
@@ -31,8 +34,21 @@ public class CommentController {
 		return comments;
 	}
 	
-	@PostMapping("/write")
-	public void insertComment(@RequestBody Comment comment) {
-		commentMapper.insertComment(comment);
+	@GetMapping(value = "/replies/{c_no}")
+	@ResponseBody
+	public List<Comment> getReplies(@PathVariable int c_no) {
+		List<Comment> replies = commentMapper.getReplies(c_no);
+		return replies;
 	}
+	
+	
+	
+	@PostMapping(value = "/write")
+	public void insertComment(@RequestBody Comment comment) {
+		System.out.println("CommentController #inserComment() called.");
+		commentMapper.postComment(comment);
+		
+	}
+	
+	
 }

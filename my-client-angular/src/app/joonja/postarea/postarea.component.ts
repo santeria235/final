@@ -15,12 +15,10 @@ import { Observable } from 'rxjs';
 
 @Injectable()
 export class PostareaComponent implements OnInit {
-  detailPage : DetailPage;
-  @Input('pageNo') pageNo : number;
+  detailPage: DetailPage;
+  @Input('pageNo') pageNo: number;
 
-  constructor(private DetailpageHttpService: DetailpageHttpService
-
-              ) { }
+  constructor(private DetailpageHttpService: DetailpageHttpService) { }
 
   ngOnInit() {
     this.DetailpageHttpService.findPageByPageNo(this.pageNo).subscribe(res => {
