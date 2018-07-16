@@ -6,14 +6,17 @@
       <div class="col-lg-8 col-md-12">
 
         <div class="comment-form">
-          <form (ngSubmit)="postComment()">
+          <form (ngSubmit)="postComment()" onsubmit="this.reset(); return false;">
             <div class="row">
 
-              <div class="col-sm-6">
+              <div class="col-sm-6" *ngIf="!authService.isLoggedIn()">
                 <input type="text" aria-required="true" name="contact-form-name" class="form-control"
                   placeholder="Enter your name" aria-invalid="true" required [(ngModel)]="commentForPost.c_writer" [ngModelOptions]="{standalone: true}">
               </div>
-              <div class="col-sm-6">
+              <div class="col-sm-6" *ngIf="authService.isLoggedIn()">
+                <p>작성자 : {{loggedInUser.u_name}}</p>
+              </div>
+              <div class="col-sm-6" *ngIf="!authService.isLoggedIn()">
                 <input type="email" aria-required="true" name="contact-form-email" class="form-control"
                   placeholder="Enter your email" aria-invalid="true" required [(ngModel)]="commentForPost.c_writer_email" [ngModelOptions]="{standalone: true}">
               </div>
@@ -26,15 +29,10 @@
                 <button class="submit-btn" type="submit" id="form-submit"><b>POST COMMENT</b></button>
               </div>
 
-              <div class="col-sm-6">
-                <input type="email" aria-required="true" name="contact-form-email" class="form-control"
-                  placeholder="Enter your email" aria-invalid="true" required  value="{{commentForPost.c_writer}}">
-              </div>
 
             </div>
           </form>
         </div>
-
 
 
         <div class="commnets-area" *ngFor="let c of comments">

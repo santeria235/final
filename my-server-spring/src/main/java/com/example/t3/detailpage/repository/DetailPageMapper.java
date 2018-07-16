@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
 
@@ -37,7 +38,10 @@ public interface DetailPageMapper {
 	public DetailPage selectByPageNo(int pageno);
 
 	@Update("UPDATE t3_detailpage SET d_likeCount=d_likeCount+1 WHERE d_pageno=#{d_pageno}")
-	public int incrementLikeCount(int d_pageno);	
+	public int incrementLikeCount(DetailPage detailPage);	
+	
+	@Update("UPDATE t3_detailpage SET d_viewCount=d_viewCount+1 WHERE d_pageno=#{d_pageno}")
+	public int incrementViewCount(DetailPage detailPage);
 //	public List<Board> selectByLimit(@Param("page") int page, @Param("size") int size);
 //	public int increment(long id);
 }

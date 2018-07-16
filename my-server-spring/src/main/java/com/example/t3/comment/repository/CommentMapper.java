@@ -4,12 +4,12 @@ import java.util.List;
 
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Options;
 import org.apache.ibatis.annotations.Result;
 import org.apache.ibatis.annotations.Results;
 import org.apache.ibatis.annotations.Select;
 
 import com.example.t3.comment.model.Comment;
+import com.example.t3.comment.model.Reply;
 
 
 
@@ -22,8 +22,10 @@ public interface CommentMapper {
     		+ "#{d_content},#{d_img},#{d_likeCount},#{d_commentCount},#{d_viewCount},#{d_date})";
     
     public String POST_COMMENT = "INSERT INTO t3_comment VALUES(#{c_no},#{d_pageno},#{c_writer},#{c_writer_email},#{c_content},#{c_date})";
+    public String POST_REPLY = "INSERT INTO t3_reply VALUES(#{c_no},#{r_writer},#{r_writer_email},#{r_content},#{r_date})";
+    
     public String SELECT_PAGE_BY_PAGENO = "SELECT * FROM t3_detailpage WHERE d_pageno=#{pageno}";
-    public String GET_COMMENTS = "select * from t3_comment where d_pageno=#{d_pageno}";
+    public String GET_COMMENTS = "select * from t3_comment where d_pageno=#{d_pageno} order by c_no desc";
     
     public String POST_DETAILPAGE_COMMENT = "INSERT INTO t3_detailpage_comment VALUES(0,#{d_pageno},#{c_no})";
     
@@ -32,21 +34,24 @@ public interface CommentMapper {
 	@Insert(POST_COMMENT)
 	public int postComment(Comment comment);
 	
+	@Insert(POST_REPLY)
+	public int postReply(Reply reply);
+	
 	@Insert(POST_DETAILPAGE_COMMENT)
 	public int postDetailpageComment(int d_pageno, int c_no);
 	
 	@Select(GET_COMMENTS)
 	public List<Comment> getComments(int d_pageno);
 	
-	@Results({
-        @Result(property = "c_no", column = "c_no"),
-        @Result(property = "c_writer", column = "r_writer"),
-        @Result(property = "c_writer_email", column = "r_writer_email"),
-        @Result(property = "c_content", column = "r_content"),
-        @Result(property = "c_date", column = "r_date")
-	})
+//	@Results({
+//        @Result(property = "c_no", column = "c_no"),
+//        @Result(property = "c_writer", column = "r_writer"),
+//        @Result(property = "c_writer_email", column = "r_writer_email"),
+//        @Result(property = "c_content", column = "r_content"),
+//        @Result(property = "c_date", column = "r_date")
+//	})
 	@Select(GET_REPLIES)
-	public List<Comment> getReplies(int c_no);
+	public List<Reply> getReplies(int c_no);
 	 
 //	public int update(DetailPage detailPage);
 //	public int delete(int p_code);

@@ -28,12 +28,12 @@ export class CommentService {
   }
 
   postComment(comment) {
-    console.log('----- Comment-Service #postComment() called -----');
-    console.log(JSON.stringify(comment));
     return this.http.post("http://localhost:8080/comment/write", comment);
   }
 
- postDetailpageComment(pageno) {
-   return this.http.post("http://localhost:8080/comment/writeToDetailpageComment", pageno);
- }
+  postReply(reply) {
+    return this.http.post("http://localhost:8080/comment/writeReply", reply);
+  }
+
+
 }

@@ -12,12 +12,14 @@ import { JoonjaComponent } from './joonja/joonja.component';
 import { RecomendedAreaComponent } from './joonja/recomended-area/recomended-area.component';
 import { PostareaComponent } from './joonja/postarea/postarea.component';
 import { CommentComponent } from './joonja/comment/comment.component';
+import { SigninComponent } from './signin/signin.component';
 
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'joonja/:pageNo', component: JoonjaComponent  },
+  { path: 'signin', component: SigninComponent }
 
 ];
 

@@ -4,6 +4,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
+import { HttpClientModule } from '@angular/common/http';
 
 import { SectionComponent } from './section/section.component';
 import { FooterComponent } from './footer/footer.component';
@@ -21,10 +22,14 @@ import { CommentCardComponent } from './joonja/comment/comment-card/comment-card
 import { DetailpageHttpService } from './detailpage-http.service';
 import { CategoryHttpService } from './service/category-http.service'
 import { CommentService } from './service/comment.service'
+import { TokenService } from './service/token.service';
+import { UserService } from './service/user.service';
+import { AuthService } from './service/auth.service';
 
 import { SwiperModule } from 'ngx-swiper-wrapper';
 import { SWIPER_CONFIG } from 'ngx-swiper-wrapper';
 import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
+import { SigninComponent } from './signin/signin.component';
 
 
 
@@ -55,19 +60,20 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     RecomendedAreaComponent,
     PostareaComponent,
     CommentComponent,
-    CommentCardComponent
+    CommentCardComponent,
+    SigninComponent,
 
 
   ],
   imports: [
     BrowserModule, SwiperModule, AppRoutingModule,
-    HttpModule, FormsModule
+    HttpModule, FormsModule, HttpClientModule
   ],
   providers: [
     {
     provide: SWIPER_CONFIG,
     useValue: DEFAULT_SWIPER_CONFIG
-  }, DetailpageHttpService, CategoryHttpService, CommentService
+  }, DetailpageHttpService, CategoryHttpService, CommentService, TokenService, AuthService, UserService
   ],
   bootstrap: [AppComponent]
 })

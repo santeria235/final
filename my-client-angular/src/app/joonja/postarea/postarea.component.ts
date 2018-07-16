@@ -18,16 +18,30 @@ export class PostareaComponent implements OnInit {
   detailPage: DetailPage;
   @Input('pageNo') pageNo: number;
 
-  constructor(private DetailpageHttpService: DetailpageHttpService) { }
+  constructor(private detailPageHttpService: DetailpageHttpService) { }
 
   ngOnInit() {
-    this.DetailpageHttpService.findPageByPageNo(this.pageNo).subscribe(res => {
+    this.getDetailPage();
+    // this.incrementViewCount();
+  }
+
+  getDetailPage() {
+    this.detailPageHttpService.findPageByPageNo(this.pageNo).subscribe(res => {
       this.detailPage = res;
     });
   }
 
   // incrementLikeCount() {
-  //   this.DetailpageHttpService.
+  //   this.detailpageHttpService.incremnetLikeCount(this.pageNo).subscribe(() => {
+  //     this.getDetailPage();
+  //
+  //   });
   // }
+
+  incrementViewCount() {
+     this.detailPageHttpService.incremnetViewCount(this.detailPage).subscribe(res => {
+       alert("incremnet View COunt")
+     });
+  }
 
 }

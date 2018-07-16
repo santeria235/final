@@ -12,7 +12,7 @@ import { CategoryHttpService, Category } from '../service/category-http.service'
 
 export class CategoryComponent implements OnInit {
   public config: SwiperConfigInterface = {
-    a11y: true,
+    a11y: false,
     direction: 'horizontal',
     slidesPerView: 4,
     keyboard: true,
@@ -23,8 +23,13 @@ export class CategoryComponent implements OnInit {
     autoHeight: false,
     speed: 500,
     loop: true,
+    loopedSlides: 1,
     spaceBetween: 0,
-    centeredSlides: true
+    centeredSlides: true,
+    autoplay : true,
+    initialSlide : 3,
+    loopAdditionalSlides : 3,
+
 
   };
   public slides = [

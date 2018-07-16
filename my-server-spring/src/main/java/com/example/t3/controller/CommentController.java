@@ -3,8 +3,6 @@ package com.example.t3.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -15,6 +13,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.t3.comment.model.Comment;
+import com.example.t3.comment.model.Reply;
 import com.example.t3.comment.repository.CommentMapper;
 
 @RestController
@@ -36,8 +35,8 @@ public class CommentController {
 	
 	@GetMapping(value = "/replies/{c_no}")
 	@ResponseBody
-	public List<Comment> getReplies(@PathVariable int c_no) {
-		List<Comment> replies = commentMapper.getReplies(c_no);
+	public List<Reply> getReplies(@PathVariable int c_no) {
+		List<Reply> replies = commentMapper.getReplies(c_no);
 		return replies;
 	}
 	
@@ -47,6 +46,13 @@ public class CommentController {
 	public void insertComment(@RequestBody Comment comment) {
 		System.out.println("CommentController #inserComment() called.");
 		commentMapper.postComment(comment);
+		
+	}
+	
+	@PostMapping(value = "/writeReply")
+	public void insertReply(@RequestBody Reply reply) {
+		System.out.println("CommentController #insertReply() called.");
+		commentMapper.postReply(reply);
 		
 	}
 	

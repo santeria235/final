@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;Comment.java&apos; to &apos;com.example.t3.comment.model.Comment.java&apos;&#x0D;&#x0A;- Original project: &apos;my-server-spring&apos;&#x0D;&#x0A;- Destination element: &apos;com.example.t3.comment.model.Comment.java&apos;&#x0D;&#x0A;- Original element: &apos;com.example.t3.comment.model.Comment.java&apos;" description="Copy compilation unit" destination="/src\/main\/java&lt;com.example.t3.comment.model{Comment.java" element1="/src\/main\/java&lt;com.example.t3.comment.model{Comment.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1531716306890" units="1" version="1.0"/>
+</session>

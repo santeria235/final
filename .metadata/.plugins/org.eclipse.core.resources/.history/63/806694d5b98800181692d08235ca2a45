@@ -1,0 +1,26 @@
+package com.example.t3.comment.model;
+
+import java.util.Date;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+public class Reply {
+	private int c_no;
+	private String r_writer;
+	private String r_writer_email;
+	private String r_content;
+	private Date r_date;
+
+	public Reply(int c_no, String r_writer, String r_writer_email, String r_content) {
+		super();
+		this.c_no = c_no;
+		this.r_writer = r_writer;
+		this.r_writer_email = r_writer_email;
+		this.r_content = r_content;
+		this.r_date = new Date();
+	}
+}

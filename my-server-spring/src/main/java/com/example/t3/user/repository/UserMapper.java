@@ -2,18 +2,45 @@ package com.example.t3.user.repository;
 
 import java.util.List;
 
-import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Result;
-import org.apache.ibatis.annotations.ResultType;
 import org.apache.ibatis.annotations.Results;
 import org.apache.ibatis.annotations.Select;
-import org.apache.ibatis.annotations.Update;
+
+import com.example.t3.comment.model.Comment;
+import com.example.t3.user.model.User;
 
 
 @Mapper
 public interface UserMapper {
+	
+	
+	    public String REGISTER_USER = "INSERT INTO t3_user VALUES(#{u_id},#{u_pw},#{u_name},#{u_isAdmin})";
+	    public String USER_LOGIN_CHECK = "SELECT * FROM t3_user WHERE u_id=#{u_id}";
+	    
+		@Insert(REGISTER_USER)
+		public int registerUser(User user);
+		
+		
+		@Select(USER_LOGIN_CHECK)
+		public User userLoginCheck(User user);
+		
+//		@Insert(POST_DETAILPAGE_COMMENT)
+//		public int postDetailpageComment(int d_pageno, int c_no);
+//		
+//		@Select(GET_COMMENTS)
+//		public List<Comment> getComments(int d_pageno);
+//		
+//		@Results({
+//	        @Result(property = "c_no", column = "c_no"),
+//	        @Result(property = "c_writer", column = "r_writer"),
+//	        @Result(property = "c_writer_email", column = "r_writer_email"),
+//	        @Result(property = "c_content", column = "r_content"),
+//	        @Result(property = "c_date", column = "r_date")
+//		})
+//		@Select(GET_REPLIES)
+//		public List<Comment> getReplies(int c_no);
 //	@Insert("INSERT INTO user(email, password) VALUES(#{email}, #{password})")
 //	public int insert(User user);
 //

@@ -17,6 +17,7 @@ public class Comment {
 	  private String c_writer_email;
 	  private String c_content;
 	  private Date c_date;
+	
 
 	
 }
