@@ -38,10 +38,10 @@ export class PostareaComponent implements OnInit {
   //   });
   // }
 
-  incrementViewCount() {
-     this.detailPageHttpService.incremnetViewCount(this.detailPage).subscribe(res => {
-       alert("incremnet View COunt")
-     });
-  }
+  // incrementViewCount() {
+  //    this.detailPageHttpService.incremnetViewCount(this.detailPage).subscribe(res => {
+  //      alert("incremnet View COunt")
+  //    });
+  // }
 
 }

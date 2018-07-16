@@ -8,33 +8,26 @@ import { HttpClientModule, HttpHeaders, HttpClient } from '@angular/common/http'
 })
 export class DetailpageHttpService {
 
-  constructor(private http: HttpClient,
+  constructor(private http: Http,
               ) { }
 
-  //
-  // findAll() {
-  //   return this.http.get("http://localhost:8080/detailpages").pipe(
-  //     map(res => {
-  //       return res.json();
-  //     })
-  //   );
-  // }
-  //
-  // findPageByPageNo(pageno) {
-  //   return this.http.get("http://localhost:8080/detailpages/"+pageno).pipe(
-  //     map(res => {
-  //       return res.json();
-  //     })
-  //   );
-  // }
 
   findAll() {
-    return this.http.get("http://localhost:8080/detailpages");
+    return this.http.get("http://localhost:8080/detailpages").pipe(
+      map(res => {
+        return res.json();
+      })
+    );
   }
 
   findPageByPageNo(pageno) {
-    return this.http.get("http://localhost:8080/detailpages/"+pageno);
+    return this.http.get("http://localhost:8080/detailpages/"+pageno).pipe(
+      map(res => {
+        return res.json();
+      })
+    );
   }
+
 
   incremnetLikeCount(detailPage : DetailPage) {
     return this.http.put("http://localhost:8080/detailpages/like",detailPage);

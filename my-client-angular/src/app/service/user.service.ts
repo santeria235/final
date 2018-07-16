@@ -10,7 +10,7 @@ import { HttpClientModule,HttpHeaders, HttpClient } from '@angular/common/http';
 export class UserService {
   loginUser: User;
 
-  constructor(private http: Http) {
+  constructor(private http: HttpClient) {
     this.loginUser=new User();
   }
 
