@@ -14,6 +14,7 @@ import { RecomendedAreaComponent } from './joonja/recomended-area/recomended-are
 import { PostareaComponent } from './joonja/postarea/postarea.component';
 import { CommentComponent } from './joonja/comment/comment.component';
 import { SigninComponent } from './signin/signin.component';
+import { FileUploadComponent } from './file-upload/file-upload.component';
 
 
 const routes: Routes = [
@@ -21,7 +22,9 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'joonja/:pageNo', component: JoonjaComponent  },
   { path: 'signin', component: SigninComponent },
-  { path: 'editor', component: EditorComponent }
+  { path: 'editor', component: EditorComponent },
+  { path: 'fileupload', component: FileUploadComponent }
+
 
 ];
 

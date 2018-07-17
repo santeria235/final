@@ -172,3 +172,260 @@ java.sql.SQLException: Column count doesn't match value count at row 1
 2018:07:17 12:00:57.382 INFO  --- [RMI TCP Connection(6)-127.0.0.1] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@43195e57: startup date [Tue Jul 17 11:27:41 KST 2018]; root of context hierarchy 
 2018:07:17 12:00:57.491 INFO  --- [RMI TCP Connection(9)-127.0.0.1] o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested. 
 2018:07:17 12:00:57.757 INFO  --- [RMI TCP Connection(6)-127.0.0.1] o.s.j.e.a.AnnotationMBeanExporter : Unregistering JMX-exposed beans on shutdown 
+2018:07:17 12:19:48.111 INFO  --- [main] c.e.t3.MyServerSpringApplication : Starting MyServerSpringApplication on DESKTOP-3CD50QG with PID 11868 (C:\java\final\my-server-spring\target\classes started by TopA-11 in C:\java\final\my-server-spring) 
+2018:07:17 12:19:48.126 INFO  --- [main] c.e.t3.MyServerSpringApplication : No active profile set, falling back to default profiles: default 
+2018:07:17 12:19:48.220 INFO  --- [main] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6eda5c9: startup date [Tue Jul 17 12:19:48 KST 2018]; root of context hierarchy 
+2018:07:17 12:19:50.517 INFO  --- [main] o.s.b.w.e.tomcat.TomcatWebServer : Tomcat initialized with port(s): 8080 (http) 
+2018:07:17 12:19:50.557 INFO  --- [main] o.a.catalina.core.StandardService : Starting service [Tomcat] 
+2018:07:17 12:19:50.557 INFO  --- [main] o.a.catalina.core.StandardEngine : Starting Servlet Engine: Apache Tomcat/8.5.31 
+2018:07:17 12:19:50.573 INFO  --- [localhost-startStop-1] o.a.c.core.AprLifecycleListener : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_161\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jdk1.8.0_161/bin/../jre/bin/server;C:/Program Files/Java/jdk1.8.0_161/bin/../jre/bin;C:/Program Files/Java/jdk1.8.0_161/bin/../jre/lib/amd64;C:\Program Files\Java\jdk1.8.0_161\bin;C:\ProgramData\Oracle\Java\javapath;C:\app\TopA-11\product\11.2.0\client_1\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\nodejs\;C:\Program Files\Android\Android Studio\jre\bin;C:\Users\TopA-11\AppData\Local\Android\Sdk\platform-tools;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Common Files\Autodesk Shared\;C:\WINDOWS\System32\OpenSSH\;C:\app\TopA-11\product\11.2.0\client_1;C:\Program Files\Git\cmd;C:\Users\TopA-11\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Bandizip\;C:\Users\TopA-11\AppData\Roaming\npm;C:\Users\TopA-11\AppData\Local\atom\bin;%USERPROFILE%\AppData\Local\Microsoft\WindowsApps;;C:\java\sts-bundle\sts-3.9.4.RELEASE;;.] 
+2018:07:17 12:19:50.776 INFO  --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext 
+2018:07:17 12:19:50.776 INFO  --- [localhost-startStop-1] o.s.web.context.ContextLoader : Root WebApplicationContext: initialization completed in 2556 ms 
+2018:07:17 12:19:50.932 INFO  --- [localhost-startStop-1] o.s.b.w.s.ServletRegistrationBean : Servlet dispatcherServlet mapped to [/] 
+2018:07:17 12:19:50.932 INFO  --- [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean : Mapping filter: 'characterEncodingFilter' to: [/*] 
+2018:07:17 12:19:50.932 INFO  --- [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean : Mapping filter: 'hiddenHttpMethodFilter' to: [/*] 
+2018:07:17 12:19:50.932 INFO  --- [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean : Mapping filter: 'httpPutFormContentFilter' to: [/*] 
+2018:07:17 12:19:50.932 INFO  --- [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean : Mapping filter: 'requestContextFilter' to: [/*] 
+2018:07:17 12:19:51.307 INFO  --- [main] o.s.w.s.h.SimpleUrlHandlerMapping : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+2018:07:17 12:19:51.620 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6eda5c9: startup date [Tue Jul 17 12:19:48 KST 2018]; root of context hierarchy 
+2018:07:17 12:19:51.679 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/categories],methods=[GET]}" onto public java.util.List<com.example.t3.category.model.Category> com.example.t3.controller.CategoryController.getAllCategories() 
+2018:07:17 12:19:51.679 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/comment/{d_pageno}],methods=[GET]}" onto public java.util.List<com.example.t3.comment.model.Comment> com.example.t3.controller.CommentController.getComments(int) 
+2018:07:17 12:19:51.679 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/comment/replies/{c_no}],methods=[GET]}" onto public java.util.List<com.example.t3.comment.model.Reply> com.example.t3.controller.CommentController.getReplies(int) 
+2018:07:17 12:19:51.679 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/comment/writeReply],methods=[POST]}" onto public void com.example.t3.controller.CommentController.insertReply(com.example.t3.comment.model.Reply) 
+2018:07:17 12:19:51.679 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/comment/write],methods=[POST]}" onto public void com.example.t3.controller.CommentController.insertComment(com.example.t3.comment.model.Comment) 
+2018:07:17 12:19:51.679 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/detailpages/like],methods=[PUT]}" onto public int com.example.t3.controller.DetailPageController.incrementLikeCount(com.example.t3.detailpage.model.DetailPage) 
+2018:07:17 12:19:51.679 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/detailpages/view],methods=[PUT]}" onto public int com.example.t3.controller.DetailPageController.incrementViewCount(com.example.t3.detailpage.model.DetailPage) 
+2018:07:17 12:19:51.679 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/detailpages],methods=[GET]}" onto public java.util.List<com.example.t3.detailpage.model.DetailPage> com.example.t3.controller.DetailPageController.getAllDetailPages() 
+2018:07:17 12:19:51.679 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/detailpages/{dp_pageno}],methods=[GET]}" onto public com.example.t3.detailpage.model.DetailPage com.example.t3.controller.DetailPageController.getDetailPage(int) 
+2018:07:17 12:19:51.679 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/detailpages/write],methods=[POST]}" onto public void com.example.t3.controller.DetailPageController.insertDetailpage(com.example.t3.detailpage.model.DetailPage) 
+2018:07:17 12:19:51.679 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/login],methods=[POST]}" onto public com.example.t3.user.model.User com.example.t3.controller.UserController.login(com.example.t3.user.model.User) 
+2018:07:17 12:19:51.679 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/register],methods=[POST]}" onto public void com.example.t3.controller.UserController.registerUser(com.example.t3.user.model.User) 
+2018:07:17 12:19:51.695 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest) 
+2018:07:17 12:19:51.695 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) 
+2018:07:17 12:19:51.710 INFO  --- [main] o.s.w.s.h.SimpleUrlHandlerMapping : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+2018:07:17 12:19:51.710 INFO  --- [main] o.s.w.s.h.SimpleUrlHandlerMapping : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+2018:07:17 12:19:51.992 INFO  --- [main] o.s.j.e.a.AnnotationMBeanExporter : Registering beans for JMX exposure on startup 
+2018:07:17 12:19:52.085 INFO  --- [main] o.s.b.w.e.tomcat.TomcatWebServer : Tomcat started on port(s): 8080 (http) with context path '' 
+2018:07:17 12:19:52.085 INFO  --- [main] c.e.t3.MyServerSpringApplication : Started MyServerSpringApplication in 5.129 seconds (JVM running for 8.557) 
+2018:07:17 12:20:00.938 INFO  --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring FrameworkServlet 'dispatcherServlet' 
+2018:07:17 12:20:00.939 INFO  --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet : FrameworkServlet 'dispatcherServlet': initialization started 
+2018:07:17 12:20:00.967 INFO  --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet : FrameworkServlet 'dispatcherServlet': initialization completed in 27 ms 
+2018:07:17 12:35:09.668 WARN  --- [http-nio-8080-exec-3] o.s.w.s.m.s.DefaultHandlerExceptionResolver : Failed to read HTTP message: org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `int` from String "ㄹㄹ화": not a valid Integer value; nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `int` from String "ㄹㄹ화": not a valid Integer value
+ at [Source: (PushbackInputStream); line: 5, column: 18] (through reference chain: com.example.t3.detailpage.model.DetailPage["d_goalmoney"]) 
+2018:07:17 12:35:16.827 WARN  --- [http-nio-8080-exec-4] o.s.w.s.m.s.DefaultHandlerExceptionResolver : Failed to read HTTP message: org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `int` from String "ㄹㄹ화": not a valid Integer value; nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `int` from String "ㄹㄹ화": not a valid Integer value
+ at [Source: (PushbackInputStream); line: 5, column: 18] (through reference chain: com.example.t3.detailpage.model.DetailPage["d_goalmoney"]) 
+2018:07:17 12:35:17.475 WARN  --- [http-nio-8080-exec-5] o.s.w.s.m.s.DefaultHandlerExceptionResolver : Failed to read HTTP message: org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `int` from String "ㄹㄹ화": not a valid Integer value; nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `int` from String "ㄹㄹ화": not a valid Integer value
+ at [Source: (PushbackInputStream); line: 5, column: 18] (through reference chain: com.example.t3.detailpage.model.DetailPage["d_goalmoney"]) 
+2018:07:17 12:36:04.641 INFO  --- [http-nio-8080-exec-7] o.s.b.f.xml.XmlBeanDefinitionReader : Loading XML bean definitions from class path resource [org/springframework/jdbc/support/sql-error-codes.xml] 
+2018:07:17 12:36:04.954 INFO  --- [http-nio-8080-exec-7] o.s.j.support.SQLErrorCodesFactory : SQLErrorCodes loaded: [DB2, Derby, H2, HDB, HSQL, Informix, MS-SQL, MySQL, Oracle, PostgreSQL, Sybase] 
+2018:07:17 12:36:04.985 ERROR --- [http-nio-8080-exec-7] o.a.c.c.C.[.[.[.[dispatcherServlet] : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.dao.DataIntegrityViolationException: 
+### Error updating database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Cannot add or update a child row: a foreign key constraint fails (`t3`.`t3_detailpage`, CONSTRAINT `t3_detailpage_ibfk_1` FOREIGN KEY (`c_id`) REFERENCES `t3_categories` (`c_id`))
+### The error may involve com.example.t3.detailpage.repository.DetailPageMapper.postDetailpage-Inline
+### The error occurred while setting parameters
+### SQL: INSERT into t3_detailpage VALUES(?, ?,?,?,?,?,?,?,?,?,?,?,?,?)
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Cannot add or update a child row: a foreign key constraint fails (`t3`.`t3_detailpage`, CONSTRAINT `t3_detailpage_ibfk_1` FOREIGN KEY (`c_id`) REFERENCES `t3_categories` (`c_id`))
+; ]; Cannot add or update a child row: a foreign key constraint fails (`t3`.`t3_detailpage`, CONSTRAINT `t3_detailpage_ibfk_1` FOREIGN KEY (`c_id`) REFERENCES `t3_categories` (`c_id`)); nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Cannot add or update a child row: a foreign key constraint fails (`t3`.`t3_detailpage`, CONSTRAINT `t3_detailpage_ibfk_1` FOREIGN KEY (`c_id`) REFERENCES `t3_categories` (`c_id`))] with root cause 
+com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Cannot add or update a child row: a foreign key constraint fails (`t3`.`t3_detailpage`, CONSTRAINT `t3_detailpage_ibfk_1` FOREIGN KEY (`c_id`) REFERENCES `t3_categories` (`c_id`))
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.Util.getInstance(Util.java:408)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:936)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3976)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3912)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2530)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2683)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2486)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1858)
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1197)
+	at org.apache.commons.dbcp.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:169)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:46)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:74)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:50)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:198)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:185)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:433)
+	at com.sun.proxy.$Proxy56.insert(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.insert(SqlSessionTemplate.java:278)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:57)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:59)
+	at com.sun.proxy.$Proxy61.postDetailpage(Unknown Source)
+	at com.example.t3.controller.DetailPageController.insertDetailpage(DetailPageController.java:46)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:209)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:136)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:877)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:783)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:991)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:925)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:974)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:877)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:661)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:851)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:109)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:496)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:790)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1468)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2018:07:17 12:56:22.258 INFO  --- [RMI TCP Connection(2)-127.0.0.1] o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested. 
+2018:07:17 12:56:22.414 INFO  --- [RMI TCP Connection(2)-127.0.0.1] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6eda5c9: startup date [Tue Jul 17 12:19:48 KST 2018]; root of context hierarchy 
+2018:07:17 12:56:23.152 INFO  --- [RMI TCP Connection(2)-127.0.0.1] o.s.j.e.a.AnnotationMBeanExporter : Unregistering JMX-exposed beans on shutdown 
+2018:07:17 12:56:42.076 INFO  --- [main] c.e.t3.MyServerSpringApplication : Starting MyServerSpringApplication on DESKTOP-3CD50QG with PID 10276 (C:\java\final\my-server-spring\target\classes started by TopA-11 in C:\java\final\my-server-spring) 
+2018:07:17 12:56:42.076 INFO  --- [main] c.e.t3.MyServerSpringApplication : No active profile set, falling back to default profiles: default 
+2018:07:17 12:56:42.123 INFO  --- [main] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@1afd44cb: startup date [Tue Jul 17 12:56:42 KST 2018]; root of context hierarchy 
+2018:07:17 12:56:43.229 INFO  --- [main] o.s.b.w.e.tomcat.TomcatWebServer : Tomcat initialized with port(s): 8080 (http) 
+2018:07:17 12:56:43.248 INFO  --- [main] o.a.catalina.core.StandardService : Starting service [Tomcat] 
+2018:07:17 12:56:43.248 INFO  --- [main] o.a.catalina.core.StandardEngine : Starting Servlet Engine: Apache Tomcat/8.5.31 
+2018:07:17 12:56:43.248 INFO  --- [localhost-startStop-1] o.a.c.core.AprLifecycleListener : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_161\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jdk1.8.0_161/bin/../jre/bin/server;C:/Program Files/Java/jdk1.8.0_161/bin/../jre/bin;C:/Program Files/Java/jdk1.8.0_161/bin/../jre/lib/amd64;C:\Program Files\Java\jdk1.8.0_161\bin;C:\ProgramData\Oracle\Java\javapath;C:\app\TopA-11\product\11.2.0\client_1\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\nodejs\;C:\Program Files\Android\Android Studio\jre\bin;C:\Users\TopA-11\AppData\Local\Android\Sdk\platform-tools;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Common Files\Autodesk Shared\;C:\WINDOWS\System32\OpenSSH\;C:\app\TopA-11\product\11.2.0\client_1;C:\Program Files\Git\cmd;C:\Users\TopA-11\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Bandizip\;C:\Users\TopA-11\AppData\Roaming\npm;C:\Users\TopA-11\AppData\Local\atom\bin;%USERPROFILE%\AppData\Local\Microsoft\WindowsApps;;C:\java\sts-bundle\sts-3.9.4.RELEASE;;.] 
+2018:07:17 12:56:43.342 INFO  --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext 
+2018:07:17 12:56:43.342 INFO  --- [localhost-startStop-1] o.s.web.context.ContextLoader : Root WebApplicationContext: initialization completed in 1219 ms 
+2018:07:17 12:56:43.458 INFO  --- [localhost-startStop-1] o.s.b.w.s.ServletRegistrationBean : Servlet dispatcherServlet mapped to [/] 
+2018:07:17 12:56:43.473 INFO  --- [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean : Mapping filter: 'characterEncodingFilter' to: [/*] 
+2018:07:17 12:56:43.473 INFO  --- [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean : Mapping filter: 'hiddenHttpMethodFilter' to: [/*] 
+2018:07:17 12:56:43.473 INFO  --- [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean : Mapping filter: 'httpPutFormContentFilter' to: [/*] 
+2018:07:17 12:56:43.473 INFO  --- [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean : Mapping filter: 'requestContextFilter' to: [/*] 
+2018:07:17 12:56:43.708 WARN  --- [main] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'fileController': Unsatisfied dependency expressed through field 'fileStorageService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'fileStorageService' defined in file [C:\java\final\my-server-spring\target\classes\com\example\t3\fileupload\service\FileStorageService.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.example.t3.fileupload.property.FileStorageProperties' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {} 
+2018:07:17 12:56:43.723 INFO  --- [main] o.a.catalina.core.StandardService : Stopping service [Tomcat] 
+2018:07:17 12:56:43.786 INFO  --- [main] o.s.b.a.l.ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled. 
+2018:07:17 12:56:43.936 ERROR --- [main] o.s.b.d.LoggingFailureAnalysisReporter : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.example.t3.fileupload.service.FileStorageService required a bean of type 'com.example.t3.fileupload.property.FileStorageProperties' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.example.t3.fileupload.property.FileStorageProperties' in your configuration.
+ 
+2018:07:17 13:05:24.658 INFO  --- [main] c.e.t3.MyServerSpringApplication : Starting MyServerSpringApplication on DESKTOP-3CD50QG with PID 11708 (C:\java\final\my-server-spring\target\classes started by TopA-11 in C:\java\final\my-server-spring) 
+2018:07:17 13:05:24.674 INFO  --- [main] c.e.t3.MyServerSpringApplication : No active profile set, falling back to default profiles: default 
+2018:07:17 13:05:24.705 INFO  --- [main] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@795cd85e: startup date [Tue Jul 17 13:05:24 KST 2018]; root of context hierarchy 
+2018:07:17 13:05:25.709 INFO  --- [main] o.s.b.w.e.tomcat.TomcatWebServer : Tomcat initialized with port(s): 8080 (http) 
+2018:07:17 13:05:25.737 INFO  --- [main] o.a.catalina.core.StandardService : Starting service [Tomcat] 
+2018:07:17 13:05:25.737 INFO  --- [main] o.a.catalina.core.StandardEngine : Starting Servlet Engine: Apache Tomcat/8.5.31 
+2018:07:17 13:05:25.737 INFO  --- [localhost-startStop-1] o.a.c.core.AprLifecycleListener : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_161\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jdk1.8.0_161/bin/../jre/bin/server;C:/Program Files/Java/jdk1.8.0_161/bin/../jre/bin;C:/Program Files/Java/jdk1.8.0_161/bin/../jre/lib/amd64;C:\Program Files\Java\jdk1.8.0_161\bin;C:\ProgramData\Oracle\Java\javapath;C:\app\TopA-11\product\11.2.0\client_1\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\nodejs\;C:\Program Files\Android\Android Studio\jre\bin;C:\Users\TopA-11\AppData\Local\Android\Sdk\platform-tools;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Common Files\Autodesk Shared\;C:\WINDOWS\System32\OpenSSH\;C:\app\TopA-11\product\11.2.0\client_1;C:\Program Files\Git\cmd;C:\Users\TopA-11\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Bandizip\;C:\Users\TopA-11\AppData\Roaming\npm;C:\Users\TopA-11\AppData\Local\atom\bin;%USERPROFILE%\AppData\Local\Microsoft\WindowsApps;;C:\java\sts-bundle\sts-3.9.4.RELEASE;;.] 
+2018:07:17 13:05:25.815 INFO  --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext 
+2018:07:17 13:05:25.831 INFO  --- [localhost-startStop-1] o.s.web.context.ContextLoader : Root WebApplicationContext: initialization completed in 1126 ms 
+2018:07:17 13:05:25.959 INFO  --- [localhost-startStop-1] o.s.b.w.s.ServletRegistrationBean : Servlet dispatcherServlet mapped to [/] 
+2018:07:17 13:05:25.963 INFO  --- [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean : Mapping filter: 'characterEncodingFilter' to: [/*] 
+2018:07:17 13:05:25.963 INFO  --- [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean : Mapping filter: 'hiddenHttpMethodFilter' to: [/*] 
+2018:07:17 13:05:25.963 INFO  --- [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean : Mapping filter: 'httpPutFormContentFilter' to: [/*] 
+2018:07:17 13:05:25.963 INFO  --- [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean : Mapping filter: 'requestContextFilter' to: [/*] 
+2018:07:17 13:05:26.166 WARN  --- [main] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'fileController': Unsatisfied dependency expressed through field 'fileStorageService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'fileStorageService' defined in file [C:\java\final\my-server-spring\target\classes\com\example\t3\fileupload\service\FileStorageService.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.example.t3.fileupload.property.FileStorageProperties' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {} 
+2018:07:17 13:05:26.166 INFO  --- [main] o.a.catalina.core.StandardService : Stopping service [Tomcat] 
+2018:07:17 13:05:26.197 INFO  --- [main] o.s.b.a.l.ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled. 
+2018:07:17 13:05:26.289 ERROR --- [main] o.s.b.d.LoggingFailureAnalysisReporter : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.example.t3.fileupload.service.FileStorageService required a bean of type 'com.example.t3.fileupload.property.FileStorageProperties' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.example.t3.fileupload.property.FileStorageProperties' in your configuration.
+ 
+2018:07:17 13:07:48.308 INFO  --- [main] c.e.t3.MyServerSpringApplication : Starting MyServerSpringApplication on DESKTOP-3CD50QG with PID 7568 (C:\java\final\my-server-spring\target\classes started by TopA-11 in C:\java\final\my-server-spring) 
+2018:07:17 13:07:48.329 INFO  --- [main] c.e.t3.MyServerSpringApplication : No active profile set, falling back to default profiles: default 
+2018:07:17 13:07:48.363 INFO  --- [main] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@7334aada: startup date [Tue Jul 17 13:07:48 KST 2018]; root of context hierarchy 
+2018:07:17 13:07:49.667 INFO  --- [main] o.s.b.w.e.tomcat.TomcatWebServer : Tomcat initialized with port(s): 8080 (http) 
+2018:07:17 13:07:49.765 INFO  --- [main] o.a.catalina.core.StandardService : Starting service [Tomcat] 
+2018:07:17 13:07:49.766 INFO  --- [main] o.a.catalina.core.StandardEngine : Starting Servlet Engine: Apache Tomcat/8.5.31 
+2018:07:17 13:07:49.788 INFO  --- [localhost-startStop-1] o.a.c.core.AprLifecycleListener : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_161\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jdk1.8.0_161/bin/../jre/bin/server;C:/Program Files/Java/jdk1.8.0_161/bin/../jre/bin;C:/Program Files/Java/jdk1.8.0_161/bin/../jre/lib/amd64;C:\Program Files\Java\jdk1.8.0_161\bin;C:\ProgramData\Oracle\Java\javapath;C:\app\TopA-11\product\11.2.0\client_1\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\nodejs\;C:\Program Files\Android\Android Studio\jre\bin;C:\Users\TopA-11\AppData\Local\Android\Sdk\platform-tools;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Common Files\Autodesk Shared\;C:\WINDOWS\System32\OpenSSH\;C:\app\TopA-11\product\11.2.0\client_1;C:\Program Files\Git\cmd;C:\Users\TopA-11\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Bandizip\;C:\Users\TopA-11\AppData\Roaming\npm;C:\Users\TopA-11\AppData\Local\atom\bin;%USERPROFILE%\AppData\Local\Microsoft\WindowsApps;;C:\java\sts-bundle\sts-3.9.4.RELEASE;;.] 
+2018:07:17 13:07:50.040 INFO  --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext 
+2018:07:17 13:07:50.041 INFO  --- [localhost-startStop-1] o.s.web.context.ContextLoader : Root WebApplicationContext: initialization completed in 1678 ms 
+2018:07:17 13:07:50.184 INFO  --- [localhost-startStop-1] o.s.b.w.s.ServletRegistrationBean : Servlet dispatcherServlet mapped to [/] 
+2018:07:17 13:07:50.190 INFO  --- [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean : Mapping filter: 'characterEncodingFilter' to: [/*] 
+2018:07:17 13:07:50.191 INFO  --- [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean : Mapping filter: 'hiddenHttpMethodFilter' to: [/*] 
+2018:07:17 13:07:50.192 INFO  --- [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean : Mapping filter: 'httpPutFormContentFilter' to: [/*] 
+2018:07:17 13:07:50.192 INFO  --- [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean : Mapping filter: 'requestContextFilter' to: [/*] 
+2018:07:17 13:07:50.592 INFO  --- [main] o.s.w.s.h.SimpleUrlHandlerMapping : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+2018:07:17 13:07:50.842 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@7334aada: startup date [Tue Jul 17 13:07:48 KST 2018]; root of context hierarchy 
+2018:07:17 13:07:50.889 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/categories],methods=[GET]}" onto public java.util.List<com.example.t3.category.model.Category> com.example.t3.controller.CategoryController.getAllCategories() 
+2018:07:17 13:07:50.895 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/comment/{d_pageno}],methods=[GET]}" onto public java.util.List<com.example.t3.comment.model.Comment> com.example.t3.controller.CommentController.getComments(int) 
+2018:07:17 13:07:50.896 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/comment/writeReply],methods=[POST]}" onto public void com.example.t3.controller.CommentController.insertReply(com.example.t3.comment.model.Reply) 
+2018:07:17 13:07:50.897 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/comment/replies/{c_no}],methods=[GET]}" onto public java.util.List<com.example.t3.comment.model.Reply> com.example.t3.controller.CommentController.getReplies(int) 
+2018:07:17 13:07:50.897 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/comment/write],methods=[POST]}" onto public void com.example.t3.controller.CommentController.insertComment(com.example.t3.comment.model.Comment) 
+2018:07:17 13:07:50.900 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/detailpages],methods=[GET]}" onto public java.util.List<com.example.t3.detailpage.model.DetailPage> com.example.t3.controller.DetailPageController.getAllDetailPages() 
+2018:07:17 13:07:50.901 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/detailpages/view],methods=[PUT]}" onto public int com.example.t3.controller.DetailPageController.incrementViewCount(com.example.t3.detailpage.model.DetailPage) 
+2018:07:17 13:07:50.901 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/detailpages/like],methods=[PUT]}" onto public int com.example.t3.controller.DetailPageController.incrementLikeCount(com.example.t3.detailpage.model.DetailPage) 
+2018:07:17 13:07:50.902 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/detailpages/{dp_pageno}],methods=[GET]}" onto public com.example.t3.detailpage.model.DetailPage com.example.t3.controller.DetailPageController.getDetailPage(int) 
+2018:07:17 13:07:50.902 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/detailpages/write],methods=[POST]}" onto public void com.example.t3.controller.DetailPageController.insertDetailpage(com.example.t3.detailpage.model.DetailPage) 
+2018:07:17 13:07:50.904 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/login],methods=[POST]}" onto public com.example.t3.user.model.User com.example.t3.controller.UserController.login(com.example.t3.user.model.User) 
+2018:07:17 13:07:50.904 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/register],methods=[POST]}" onto public void com.example.t3.controller.UserController.registerUser(com.example.t3.user.model.User) 
+2018:07:17 13:07:50.905 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/uploadMultipleFiles],methods=[POST]}" onto public java.util.List<com.example.t3.fileupload.payload.UploadFileResponse> com.example.t3.fileupload.FileController.uploadMultipleFiles(org.springframework.web.multipart.MultipartFile[]) 
+2018:07:17 13:07:50.906 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/downloadFile/{fileName:.+}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<org.springframework.core.io.Resource> com.example.t3.fileupload.FileController.downloadFile(java.lang.String,javax.servlet.http.HttpServletRequest) 
+2018:07:17 13:07:50.907 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/uploadFile],methods=[POST]}" onto public com.example.t3.fileupload.payload.UploadFileResponse com.example.t3.fileupload.FileController.uploadFile(org.springframework.web.multipart.MultipartFile) 
+2018:07:17 13:07:50.909 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest) 
+2018:07:17 13:07:50.910 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) 
+2018:07:17 13:07:50.937 INFO  --- [main] o.s.w.s.h.SimpleUrlHandlerMapping : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+2018:07:17 13:07:50.937 INFO  --- [main] o.s.w.s.h.SimpleUrlHandlerMapping : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+2018:07:17 13:07:51.155 INFO  --- [main] o.s.j.e.a.AnnotationMBeanExporter : Registering beans for JMX exposure on startup 
+2018:07:17 13:07:51.218 INFO  --- [main] o.s.b.w.e.tomcat.TomcatWebServer : Tomcat started on port(s): 8080 (http) with context path '' 
+2018:07:17 13:07:51.221 INFO  --- [main] c.e.t3.MyServerSpringApplication : Started MyServerSpringApplication in 3.338 seconds (JVM running for 4.098) 
+2018:07:17 13:09:03.137 INFO  --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring FrameworkServlet 'dispatcherServlet' 
+2018:07:17 13:09:03.138 INFO  --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : FrameworkServlet 'dispatcherServlet': initialization started 
+2018:07:17 13:09:03.167 INFO  --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : FrameworkServlet 'dispatcherServlet': initialization completed in 29 ms 
+2018:07:17 13:09:03.585 INFO  --- [http-nio-8080-exec-1] c.e.t3.fileupload.FileController : ──────────────────File Uploading──────────────────── 
+2018:07:17 13:15:17.138 INFO  --- [http-nio-8080-exec-6] c.e.t3.fileupload.FileController : ──────────────────File Uploading──────────────────── 
+2018:07:17 13:26:43.732 INFO  --- [http-nio-8080-exec-1] c.e.t3.fileupload.FileController : ──────────────────File Uploading──────────────────── 
+2018:07:17 13:27:22.018 INFO  --- [http-nio-8080-exec-3] c.e.t3.fileupload.FileController : ──────────────────File Uploading──────────────────── 

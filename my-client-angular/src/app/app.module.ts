@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpModule } from '@angular/http';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -12,6 +12,8 @@ import { CardComponent } from './section/card/card.component';
 import { HeaderComponent } from './header/header.component';
 import { CategoryComponent } from './category/category.component';
 import { HomeComponent } from './home/home.component';
+import { FileUploadComponent } from './file-upload/file-upload.component';
+
 
 import { JoonjaComponent } from './joonja/joonja.component';
 import { RecomendedAreaComponent } from './joonja/recomended-area/recomended-area.component';
@@ -64,12 +66,13 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     CommentCardComponent,
     SigninComponent,
     EditorComponent,
+    FileUploadComponent
 
 
   ],
   imports: [
     BrowserModule, SwiperModule, AppRoutingModule,
-    HttpModule, FormsModule, HttpClientModule
+    HttpModule, FormsModule, HttpClientModule, ReactiveFormsModule
   ],
   providers: [
     {
