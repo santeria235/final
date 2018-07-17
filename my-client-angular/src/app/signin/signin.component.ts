@@ -36,21 +36,13 @@ export class SigninComponent implements OnInit {
   ngOnInit() {
   }
 
-  // @HostListener('click')
-  //   click() {
-  //     this.userService.loginToggle();
-  //   }
 
   login() {
-    // this.admin.a_id =this.login1.uid;
-    // this.admin.a_pw =this.login1.upw;
     console.log("SigninComponent #login() called.")
     this.userService.getUsers(this.loginUser)
     .subscribe((user : User) => {
         if(user==null){
           alert("아이디 또는 비밀번호를 확인해주세요.");
-          // this.router.navigate(["index/login"]);
-          // this.user = new User;
           return false;
         }
         alert("로그인 되었습니다.");

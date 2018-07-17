@@ -8,7 +8,6 @@ export class DetailPage {
   d_content : string;
   d_detailimg : string;
   d_thumbnailimg : string;
-  d_hashtags : string;
   d_likeCount : number;
   d_commentCount : number;
   d_viewCount : number;

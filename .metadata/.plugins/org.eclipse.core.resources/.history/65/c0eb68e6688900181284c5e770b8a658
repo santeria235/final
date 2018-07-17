@@ -16,7 +16,7 @@ import com.example.t3.user.model.User;
 public interface UserMapper {
 	
 	
-	    public String REGISTER_USER = "INSERT INTO t3_user VALUES(#{u_id},#{u_pw},#{u_name},#{u_profileImg},#{u_money},#{u_isAdmin})";
+	    public String REGISTER_USER = "INSERT INTO t3_user VALUES(#{u_id},#{u_pw},#{u_name},#{u_isAdmin})";
 	    public String USER_LOGIN_CHECK = "SELECT * FROM t3_user WHERE u_id=#{u_id}";
 	    
 		@Insert(REGISTER_USER)

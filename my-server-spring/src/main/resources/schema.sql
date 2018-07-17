@@ -50,7 +50,7 @@ CREATE TABLE t3_detailpage
     `d_goalmoney`    INT                   NOT NULL    COMMENT '목표금액', 
     `d_currentmoney` INT                   NOT NULL    COMMENT '현재금액', 
     `d_content`      blob                  NOT NULL    COMMENT '상품내용', 
-    `d_detialimg`    VARCHAR(200)          NOT NULL    COMMENT '상세 이미지', 
+    `d_detailimg`    VARCHAR(200)          NOT NULL    COMMENT '상세 이미지', 
     `d_thumbnailimg` VARCHAR(200)          NOT NULL    COMMENT '썸네일 이미지', 
     `d_likeCount`    INT                   NOT NULL    COMMENT '좋아요', 
     `d_commentCount` INT                   NOT NULL    COMMENT '코멘트수', 
@@ -61,7 +61,7 @@ CREATE TABLE t3_detailpage
     FOREIGN KEY (`c_id`) REFERENCES `t3_categories`(`c_id`),
     FOREIGN KEY (`u_id`) REFERENCES `t3_user`(`u_id`)
 );
-
+select * from t3_detailpage;
 drop table t3_detailpage_comment;
 
 SELECT * FROM t3_comment WHERE (SELECT c_no FROM t3_detailpage_comment dc WHERE dc.d_pageno = 1) = t3_comment.c_no;

@@ -23,7 +23,7 @@ public interface DetailPageMapper {
     public String SELECT_PAGE_BY_PAGENO = "SELECT * FROM t3_detailpage WHERE d_pageno=#{pageno}";
     
 	@Insert(INSERT_DETAIL_PAGE)
-	public int postDetailpage(DetailPage detailPage);
+	public int insert(DetailPage detailPage);
 	
 //	public int update(DetailPage detailPage);
 //	public int delete(int p_code);
@@ -37,6 +37,8 @@ public interface DetailPageMapper {
 	@Select(SELECT_PAGE_BY_PAGENO)
 	public DetailPage selectByPageNo(int pageno);
 
+	@Insert(POST_DETAILPAGE)
+	public int postDetailpage(DetailPage detailPage);
 	
 	@Update("UPDATE t3_detailpage SET d_likeCount=d_likeCount+1 WHERE d_pageno=#{d_pageno}")
 	public int incrementLikeCount(DetailPage detailPage);	

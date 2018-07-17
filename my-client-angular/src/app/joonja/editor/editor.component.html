@@ -13,11 +13,11 @@
                   카테고리
                 </button>
                   <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#" *ngFor="let category of categories">{{category.c_name}}</a>
+                    <a class="dropdown-item" href="javascript:void(0)" *ngFor="let category of categories" (click)="getCategoryId(category)">{{category.c_name}}</a>
                   </div>
                 </div>
 
-                <input type="text" class="form-control" placeholder="제목을 입력하세요" [(ngModel)]="detailpage.d_title">
+                <input type="text" class="form-control" placeholder="제목을 입력하세요" [(ngModel)]="detailPageForPost.d_title" [ngModelOptions]="{standalone: true}">
 
               </div>
             </form>
@@ -27,10 +27,10 @@
             <form action="/action_page.php">
               <div class="form-group">
                 <label for="comment">Comment:</label>
-                <textarea class="form-control" rows="15" id="comment" name="text" placeholder="내용을 입력하세요" [(ngModel)]="detailpage.d_content"></textarea>
+                <textarea class="form-control" rows="15" id="comment" name="text" placeholder="내용을 입력하세요" [(ngModel)]="detailPageForPost.d_content" [ngModelOptions]="{standalone: true}">></textarea>
                 <br />
                 <label>목표 모금액:</label>
-                <input type="text" [(ngModel)]="detailpage.d_goalmoney">
+                <input type="text" [(ngModel)]="detailPageForPost.d_goalmoney" [ngModelOptions]="{standalone: true}">>
 
               </div>
             </form>
@@ -40,7 +40,7 @@
             <label>썸네일이미지:</label>
             <form action="/action_page.php">
               <div class="form-group">
-                <input type="file" class="form-control-file border" name="file" [(ngModel)]="detailpage.d_thumbnailimg">
+                <input type="file" class="form-control-file border" name="file" [(ngModel)]="detailPageForPost.d_thumbnailimg" [ngModelOptions]="{standalone: true}">>
               </div>
             </form>
           </div>
@@ -50,31 +50,13 @@
 
             <form action="/action_page.php">
               <div class="form-group">
-                <input type="file" class="form-control-file border" name="file" [(ngModel)]="detailpage.d_detailimg">
+                <input type="file" class="form-control-file border" name="file" [(ngModel)]="detailPageForPost.d_detailimg" [ngModelOptions]="{standalone: true}">>
               </div>
             </form>
 
             <br />
-            <input type="text" class="form-control" placeholder="해쉬태그를 입력하세요" [(ngModel)]="hashtags">
+            <input type="text" class="form-control" placeholder="해쉬태그를 입력하세요" [(ngModel)]="hashtags" [ngModelOptions]="{standalone: true}">>
             <br /><br />
 
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary" (click)="postDetailpage()">Submit</button>
             <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-            <!--해쉬태그 선택-->
-            <!-- <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#demo">해쉬태그</button>
-          <div id="demo" class="collapse">
-
-          <div class="container">
-
-          <form>
-          <label class="checkbox-inline">
-          <input type="checkbox" value="">샤넬
-        </label>
-        <label class="checkbox-inline">
-        <input type="checkbox" value="">명품
-      </label>
-      <label class="checkbox-inline">
-      <input type="checkbox" value="">운동화
-    </label>
-  </form>
-</div> -->
