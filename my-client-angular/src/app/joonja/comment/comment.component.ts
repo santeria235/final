@@ -22,7 +22,7 @@ export class CommentComponent implements OnInit {
     this.getComments(this.pageNo);
     this.commentForPost.d_pageno=this.pageNo;
     this.loggedInUser = this.authService.getLoggedInUser();
-    this.loggedInUser = JSON.parse(this.loggedInUser._body);
+    // this.loggedInUser = JSON.parse(this.loggedInUser._body);
 
 
     // console.log("------------------------------------------");

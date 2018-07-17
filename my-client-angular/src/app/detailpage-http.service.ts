@@ -3,11 +3,12 @@ import { Http} from '@angular/http';
 import { map } from 'rxjs/operators';
 import { DetailPage } from './section/detailpage';
 import { HttpClientModule, HttpHeaders, HttpClient } from '@angular/common/http';
+import { Category } from './service/category-http.service';
 @Injectable({
   providedIn: 'root'
 })
 export class DetailpageHttpService {
-
+  selectedByCategory : DetailPage[];
   constructor(private http: Http,
               ) { }
 
@@ -20,8 +21,18 @@ export class DetailpageHttpService {
     );
   }
 
+  findByCategoryId(category : Category) {
+    return this.http.get("http://localhost:8080/detailpages/category/"+category.c_id).pipe(
+      map((res : DetailPage[]) => {
+        console.log(res);
+        this.selectedByCategory = res;
+        // return res.json();
+      })
+    );
+  }
+
   findPageByPageNo(pageno) {
-    return this.http.get("http://localhost:8080/detailpages/"+pageno).pipe(
+    return this.http.get("http://localhost:8080/detailpages/cate"+pageno).pipe(
       map(res => {
         return res.json();
       })

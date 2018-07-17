@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component, OnInit, ViewChild, AfterViewInit  } from '@angular/core';
+import { CategoryHttpService, Category } from '../service/category-http.service';
+import { CategoryComponent } from '../category/category.component';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  public categories : Category[];
+
+  constructor(private categoryHttpService : CategoryHttpService) { }
 
   ngOnInit() {
+    this.categoryHttpService.findAll().subscribe(res => {
+      this.categories = res;
+    });
   }
+
 
 }

@@ -5,15 +5,19 @@ import { map } from 'rxjs/operators';
 
 
 
+
 export class Category {
   c_id : number;
   c_name : string;
+  c_categoryimg : string;
 }
 
 @Injectable({
   providedIn: 'root'
 })
 export class CategoryHttpService {
+
+
 
   constructor(private http: Http) { }
 
@@ -25,4 +29,8 @@ export class CategoryHttpService {
       })
     );
   }
+
+
+
+
 }

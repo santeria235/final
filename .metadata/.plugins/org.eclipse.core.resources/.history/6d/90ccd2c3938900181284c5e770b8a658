@@ -10,7 +10,6 @@ import lombok.NoArgsConstructor;
 public class Category {
 	private int c_id;
 	private String c_name;
-	private String c_categoryimg;
 }
 //`c_id`         INT             NOT NULL    COMMENT '카테고리 번호', 
 //`c_name`       VARCHAR(30)     NOT NULL    COMMENT '카테고리 이름', 

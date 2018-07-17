@@ -40,13 +40,6 @@ public class DetailPageController {
 		return detailPages;
 	}
 	
-	@GetMapping(value = "/category/{c_id}")
-	@ResponseBody
-	public List<DetailPage> getDetailPageByCategoryId(@PathVariable int c_id) {
-		List<DetailPage> detailPages = detailPageMapper.selectByCategoryId(c_id);
-		return detailPages;
-	}
-	
 	@PostMapping(value = "/write")
 	public void insertDetailpage(@RequestBody DetailPage detailpage) {
 		System.out.println("DetailPageController #insertDetailpage() called.");

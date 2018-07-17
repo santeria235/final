@@ -35,7 +35,7 @@ public interface DetailPageMapper {
 	public List<DetailPage> selectAll();
 	
 	
-	@Select("SELECT * FROM t3_detailpage where c_id=#{c_id}")
+	@Select("SELECT * FROM t3_detailpage")
 	public List<DetailPage> selectByCategoryId(int c_id);
 	
 	

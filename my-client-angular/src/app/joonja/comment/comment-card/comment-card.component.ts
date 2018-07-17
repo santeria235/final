@@ -22,7 +22,7 @@ export class CommentCardComponent implements OnInit {
     this.getReplies(this.comment.c_no);
 
     this.loggedInUser = this.authService.getLoggedInUser();
-    this.loggedInUser = JSON.parse(this.loggedInUser._body);
+    // this.loggedInUser = JSON.parse(this.loggedInUser._body);
   }
 
   setReplyForPost() {

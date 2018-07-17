@@ -34,8 +34,9 @@ CREATE TABLE t3_detailpage_hashtags(
 drop table t3_categories;
 CREATE TABLE t3_categories
 (
-    `c_id`         INT             NOT NULL    COMMENT '카테고리 번호', 
-    `c_name`       VARCHAR(30)     NOT NULL    COMMENT '카테고리 이름', 
+    `c_id`          INT             NOT NULL    COMMENT '카테고리 번호', 
+    `c_name`        VARCHAR(30)     NOT NULL    COMMENT '카테고리 이름',
+    `c_categoryimg` VARCHAR(200)    NOT NULL    COMMENT '카테고리  이미지', 
     PRIMARY KEY (c_id)
 );
 
@@ -131,12 +132,21 @@ Insert into Table t3_detailpage(`d_pageno`,d_title`,`u_id`,`c_id`,`d_goalmoney`,
 	 Values(Data1, Data2, Data3...)
 	 
 select * from t3_categories;
-Insert into t3_categories Values('100','소셜/아이디어');
-Insert into t3_categories(c_id,c_name) Values(200,'디자인');
-Insert into t3_categories(c_id,c_name) Values(300,'엔지니어링');
-Insert into t3_categories(c_id,c_name) Values(400,'성금모금');
-Insert into t3_categories(c_id,c_name) Values(500,'스타트업');
-Insert into t3_categories(c_id,c_name) Values(600,'기타');
+drop table t3_categories;
+Insert into t3_categories Values('100','ART','http://localhost:8080/assets/categoryimage/art.jpg');
+Insert into t3_categories Values('200','COMICS','http://localhost:8080/assets/categoryimage/comics.jpg');
+Insert into t3_categories Values('300','CRAFTS','http://localhost:8080/assets/categoryimage/crafts.jpg');
+Insert into t3_categories Values('400','DANCE','http://localhost:8080/assets/categoryimage/dance.jpg');
+Insert into t3_categories Values('500','DESIGN','http://localhost:8080/assets/categoryimage/design.jpg');
+Insert into t3_categories Values('600','FASHION','http://localhost:8080/assets/categoryimage/fashion.jpg');
+Insert into t3_categories Values('700','FILM & VIDEO','http://localhost:8080/assets/categoryimage/filmvideo.jpg');
+Insert into t3_categories Values('800','FOOD','http://localhost:8080/assets/categoryimage/Food.jpg');
+Insert into t3_categories Values('900','GAMES','http://localhost:8080/assets/categoryimage/games.png');
+Insert into t3_categories Values('1000','JOURNALISM','http://localhost:8080/assets/categoryimage/journalism.jpg');
+Insert into t3_categories Values('1100','MUSIC','http://localhost:8080/assets/categoryimage/music.jpg');
+Insert into t3_categories Values('1200','PHOTOGRAPHY','http://localhost:8080/assets/categoryimage/photography.jpg');
+Insert into t3_categories Values('1300','TECHNOLOGY','http://localhost:8080/assets/categoryimage/Techonology.png');
+
 
 insert into t3_user values('santeria235@gmail.com','1234','이상오','temp','T');
 

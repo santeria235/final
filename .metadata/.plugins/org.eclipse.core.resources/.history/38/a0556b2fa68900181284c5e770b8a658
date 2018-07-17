@@ -40,7 +40,7 @@ public class DetailPageController {
 		return detailPages;
 	}
 	
-	@GetMapping(value = "/category/{c_id}")
+	@GetMapping(value = "/{c_id}")
 	@ResponseBody
 	public List<DetailPage> getDetailPageByCategoryId(@PathVariable int c_id) {
 		List<DetailPage> detailPages = detailPageMapper.selectByCategoryId(c_id);

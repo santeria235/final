@@ -26,11 +26,11 @@
           <div class="container">
             <form action="/action_page.php">
               <div class="form-group">
-                <label for="comment">Comment:</label>
+                <!-- <label for="comment">Comment:</label> -->
                 <textarea class="form-control" rows="15" id="comment" name="text" placeholder="내용을 입력하세요" [(ngModel)]="detailPageForPost.d_content" [ngModelOptions]="{standalone: true}">></textarea>
                 <br />
                 <label>목표 모금액:</label>
-                <input type="text" [(ngModel)]="detailPageForPost.d_goalmoney" [ngModelOptions]="{standalone: true}">>
+                <input type="text" [(ngModel)]="detailPageForPost.d_goalmoney" [ngModelOptions]="{standalone: true}">
 
               </div>
             </form>
@@ -38,24 +38,33 @@
 
           <div class="container">
             <label>썸네일이미지:</label>
-            <form action="/action_page.php">
+            <form [formGroup]="form">
               <div class="form-group">
-                <input type="file" class="form-control-file border" name="file" [(ngModel)]="detailPageForPost.d_thumbnailimg" [ngModelOptions]="{standalone: true}">>
+                <div class="btns clearfix">
+                  <label class="btn btn-file btn-cancel pull-left">
+                    <input type="file" accept="image/jpeg"
+                      (change)="onSubmit(thumbnailimg.files,'thumbnailImgFile')" #thumbnailimg>
+                  </label>
+                </div>
+              </div>
+              <label>상세이미지:</label>
+              <div class="form-group">
+                <div class="btns clearfix">
+                  <label class="btn btn-file btn-cancel pull-left">
+                    <input type="file" accept="image/jpeg"
+                      (change)="onSubmit(detailimg.files,'detailImgFile')" #detailimg>
+                  </label>
+                </div>
               </div>
             </form>
           </div>
 
           <div class="container">
-            <label>상세이미지:</label>
+            <label>해쉬태그:</label>
 
-            <form action="/action_page.php">
-              <div class="form-group">
-                <input type="file" class="form-control-file border" name="file" [(ngModel)]="detailPageForPost.d_detailimg" [ngModelOptions]="{standalone: true}">>
-              </div>
-            </form>
 
             <br />
-            <input type="text" class="form-control" placeholder="해쉬태그를 입력하세요" [(ngModel)]="hashtags" [ngModelOptions]="{standalone: true}">>
+            <input type="text" class="form-control" placeholder="해쉬태그를 입력하세요" [(ngModel)]="hashtags" [ngModelOptions]="{standalone: true}">
             <br /><br />
 
             <button type="submit" class="btn btn-primary" (click)="postDetailpage()">Submit</button>

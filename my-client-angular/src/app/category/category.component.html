@@ -32,8 +32,8 @@
     <div class="swiper-wrapper">
 
       <div class="swiper-slide" *ngFor="let c of categories">
-        <a class="slider-category" href="#">
-          <div class="blog-image"><img src="assets/images/category-1-400x250.jpg" alt="Blog Image"></div>
+        <a class="slider-category" href="javascript:void(0)" (click)="deliverCategory(c)">
+          <div class="blog-image"><img src="{{c.c_categoryimg}}" alt="Blog Image"></div>
 
           <div class="category">
             <div class="display-table center-text">

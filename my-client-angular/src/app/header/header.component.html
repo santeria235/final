@@ -6,7 +6,7 @@
     <div class="menu-nav-icon" data-nav-menu="#main-menu"><i class="ion-navicon"></i></div>
 
     <ul class="main-menu visible-on-click" id="main-menu">
-      <li><a href="#">INVEST</a></li>
+      <!-- <li><a href="#">INVEST</a></li> -->
 
       <!-- <li><a [routerLink]="['signin']">Sign in</a></li>
       <li><a [routerLink]="['signup']">Sign up</a></li> -->
@@ -20,7 +20,6 @@
       </li>
       <li *ngIf="authService.isLoggedIn()"><a href="#">My Page</a></li>
       <li *ngIf="authService.isLoggedIn()"><a [routerLink]="['editor']">Editor</a></li>
-      <li *ngIf="authService.isLoggedIn()"><a [routerLink]="['fileupload']">fileupload</a></li>
 
 
 

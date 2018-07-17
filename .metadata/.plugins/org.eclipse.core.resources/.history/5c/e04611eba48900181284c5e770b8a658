@@ -34,11 +34,6 @@ public interface DetailPageMapper {
 	@Select("SELECT * FROM t3_detailpage")
 	public List<DetailPage> selectAll();
 	
-	
-	@Select("SELECT * FROM t3_detailpage where c_id=#{c_id}")
-	public List<DetailPage> selectByCategoryId(int c_id);
-	
-	
 	@Select(SELECT_PAGE_BY_PAGENO)
 	public DetailPage selectByPageNo(int pageno);
 

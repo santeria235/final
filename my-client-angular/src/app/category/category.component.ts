@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter  } from '@angular/core';
 import { SwiperComponent, SwiperDirective, SwiperConfigInterface,
   SwiperScrollbarInterface, SwiperPaginationInterface } from 'ngx-swiper-wrapper';
 import { CategoryHttpService, Category } from '../service/category-http.service';
+import { DetailpageHttpService } from '../detailpage-http.service';
 @Component({
   selector: 'app-category',
   templateUrl: './category.component.html',
@@ -41,13 +42,19 @@ export class CategoryComponent implements OnInit {
     'Sixth slide'
   ];
 
-  public categories : Category[];
-  constructor(private categoryHttpService : CategoryHttpService ) { }
+  @Input('categories') categories : Category[];
+
+  constructor(private categoryHttpService : CategoryHttpService,
+              private detailPageHttpService : DetailpageHttpService ) { }
 
   ngOnInit() {
-    this.categoryHttpService.findAll().subscribe(res => {
-      this.categories = res;
-    });
+
   }
+
+  deliverCategory(category) {
+    this.detailPageHttpService.findByCategoryId(category);
+  }
+
+
 
 }
