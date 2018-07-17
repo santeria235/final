@@ -19,7 +19,7 @@ public class DetailPage {
     private int d_goalmoney;
     private int d_currentmoney;
     private String d_content;
-    private String d_detailimg;
+    private String d_detialimg;
     private String d_thumbnailimg;
     private int d_likeCount;
     private int d_commentCount;

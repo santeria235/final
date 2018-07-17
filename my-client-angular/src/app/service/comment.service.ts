@@ -2,13 +2,13 @@ import { Injectable } from '@angular/core';
 import { Http} from '@angular/http';
 import { map } from 'rxjs/operators';
 import { Comment } from '../joonja/comment/comment';
-
+import { Reply } from '../joonja/comment/reply';
+import { Observable } from "rxjs";
 
 @Injectable({
   providedIn: 'root'
 })
 export class CommentService {
-
   constructor(private http: Http) { }
 
   getComments(pageno) {
@@ -34,6 +34,8 @@ export class CommentService {
   postReply(reply) {
     return this.http.post("http://localhost:8080/comment/writeReply", reply);
   }
+
+
 
 
 }

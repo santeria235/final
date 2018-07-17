@@ -30,6 +30,7 @@ import { SwiperModule } from 'ngx-swiper-wrapper';
 import { SWIPER_CONFIG } from 'ngx-swiper-wrapper';
 import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
 import { SigninComponent } from './signin/signin.component';
+import { EditorComponent } from './joonja/editor/editor.component';
 
 
 
@@ -62,6 +63,7 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     CommentComponent,
     CommentCardComponent,
     SigninComponent,
+    EditorComponent,
 
 
   ],

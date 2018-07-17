@@ -19,6 +19,7 @@
         <app-signin></app-signin>
       </li>
       <li *ngIf="authService.isLoggedIn()"><a href="#">My Page</a></li>
+      <li *ngIf="authService.isLoggedIn()"><a [routerLink]="['editor']">Editor</a></li>
 
 
 
