@@ -49,12 +49,14 @@
                     <div class="box">
                         <div class="content registerBox" style="display:none;">
                          <div class="form">
-                            <form (ngSubmit)="registerUser()" method="post" html="{:multipart=>true}" data-remote="true" action="/register" accept-charset="UTF-8">
+                            <form>
                             <input id="register-email" class="form-control" type="text" placeholder="Email" name="email" [(ngModel)]="user.u_id">
                             <input id="register-password" class="form-control" type="password" placeholder="Password" name="password" [(ngModel)]="user.u_pw">
                             <input id="register-password_confirmation" class="form-control" type="password" placeholder="Repeat Password" name="password_confirmation" [(ngModel)]="confirmPW">
                             <input id="register-name" class="form-control" type="text" placeholder="name" name="name" [(ngModel)]="user.u_name">
-                            <input class="btn btn-default btn-register" type="submit" value="Create account" name="commit">
+                            <label>프로필사진 등록</label>
+                            <input type="file" accept="image/jpeg" (change)="onSubmit(profileimg.files)" #profileimg>
+                            <input class="btn btn-default btn-register" type="submit" value="Create account" name="commit" (click)="registerUser()">
                             </form>
                             </div>
                         </div>

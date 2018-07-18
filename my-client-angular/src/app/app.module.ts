@@ -6,11 +6,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 
-import { SectionComponent } from './section/section.component';
 import { FooterComponent } from './footer/footer.component';
 import { CardComponent } from './section/card/card.component';
 import { HeaderComponent } from './header/header.component';
-import { CategoryComponent } from './category/category.component';
 import { HomeComponent } from './home/home.component';
 import { FileUploadComponent } from './file-upload/file-upload.component';
 
@@ -27,12 +25,14 @@ import { CommentService } from './service/comment.service'
 import { TokenService } from './service/token.service';
 import { UserService } from './service/user.service';
 import { AuthService } from './service/auth.service';
+import { InvestService } from './service/invest.service';
 
 import { SwiperModule } from 'ngx-swiper-wrapper';
 import { SWIPER_CONFIG } from 'ngx-swiper-wrapper';
 import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
 import { SigninComponent } from './signin/signin.component';
 import { EditorComponent } from './joonja/editor/editor.component';
+import { PurchaseComponent } from './joonja/postarea/purchase/purchase.component';
 
 
 
@@ -53,11 +53,9 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
 @NgModule({
   declarations: [
     AppComponent,
-    SectionComponent,
     FooterComponent,
     CardComponent,
     HeaderComponent,
-    CategoryComponent,
     HomeComponent,
     JoonjaComponent,
     RecomendedAreaComponent,
@@ -66,7 +64,8 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     CommentCardComponent,
     SigninComponent,
     EditorComponent,
-    FileUploadComponent
+    FileUploadComponent,
+    PurchaseComponent
 
 
   ],
@@ -78,7 +77,7 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     {
     provide: SWIPER_CONFIG,
     useValue: DEFAULT_SWIPER_CONFIG
-  }, DetailpageHttpService, CategoryHttpService, CommentService, TokenService, AuthService, UserService
+  }, DetailpageHttpService, CategoryHttpService, CommentService, TokenService, AuthService, UserService, InvestService
   ],
   bootstrap: [AppComponent]
 })

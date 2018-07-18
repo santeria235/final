@@ -10,7 +10,7 @@ import { Observable } from "rxjs";
 })
 export class CommentService {
   constructor(private http: Http) { }
-
+  comments : Comment[];
   getComments(pageno) {
     return this.http.get("http://localhost:8080/comment/"+pageno).pipe(
       map(res => {
@@ -35,7 +35,13 @@ export class CommentService {
     return this.http.post("http://localhost:8080/comment/writeReply", reply);
   }
 
+  deleteComment(comment) {
+    return this.http.post("http://localhost:8080/comment/delete", comment);
+  }
 
+  deleteReply(reply) {
+    return this.http.post("http://localhost:8080/comment/reply/delete", reply);
+  }
 
 
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Renderer2 } from '@angular/core';
 import { DetailPage } from '../../section/detailpage';
 import { DetailpageHttpService } from '../../detailpage-http.service';
 import { Http, Response } from '@angular/http';
@@ -6,8 +6,10 @@ import { Headers, RequestOptions } from '@angular/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { CommentService } from '../../service/comment.service';
+import { AuthService } from '../../service/auth.service';
 import { Comment } from '../comment/comment';
 import { Reply } from '../comment/reply';
+import { User } from '../../signin/user';
 
 
 @Component({
@@ -18,40 +20,63 @@ import { Reply } from '../comment/reply';
 
 @Injectable()
 export class PostareaComponent implements OnInit {
+  loggedInUser : User;
+  fundToggle : boolean = false;
   detailPage: DetailPage;
   comments : Comment[];
-  commentCount : number = 0;
+  writer : User;
+  isLikeChecked : boolean = false;
   tmp;
   @Input('pageNo') pageNo: number;
 
+
+
   constructor(private detailPageHttpService: DetailpageHttpService,
-              private commentService : CommentService) { }
+              private commentService : CommentService,
+              private authService : AuthService,
+              private renderer: Renderer2) { }
 
   ngOnInit() {
     this.getDetailPage();
-    // this.incrementViewCount();
+    this.loggedInUser = this.authService.getLoggedInUser();
 
-    // 코멘트수구하기
   }
 
   getDetailPage() {
     this.detailPageHttpService.findPageByPageNo(this.pageNo).subscribe(res => {
       this.detailPage = res;
+      this.getWriter().subscribe(res => {
+        this.writer = res;
+      });
+        const elem: HTMLElement = document.getElementById('progressbar');
+        this.renderer.setStyle(elem, 'width', (this.detailPage.d_currentmoney/this.detailPage.d_goalmoney)*100 + '%');
     });
   }
 
+  getWriter() {
+    return this.detailPageHttpService.findWriterByUserId(this.detailPage);
+  }
 
-  // incrementLikeCount() {
-  //   this.detailpageHttpService.incremnetLikeCount(this.pageNo).subscribe(() => {
-  //     this.getDetailPage();
-  //
-  //   });
-  // }
+  fundingToggle() {
+    if (this.loggedInUser==null) {
+      alert("로그인 하셔야 이용할 수 있습니다");
+    } else {
+      this.fundToggle = !this.fundToggle;
+    }
+  }
 
-  // incrementViewCount() {
-  //    this.detailPageHttpService.incremnetViewCount(this.detailPage).subscribe(res => {
-  //      alert("incremnet View COunt")
-  //    });
-  // }
+  incrementLikeCount() {
+    if(!this.isLikeChecked) {
+      this.detailPageHttpService.incremnetLikeCount(this.detailPage).subscribe(res => {
+        this.detailPage = res;
+        this.isLikeChecked = !this.isLikeChecked;
+        });
+    } else {
+      this.detailPageHttpService.decremnetLikeCount(this.detailPage).subscribe(res => {
+        this.detailPage = res;
+        this.isLikeChecked = !this.isLikeChecked;
+        });
+    }
+  }
 
 }

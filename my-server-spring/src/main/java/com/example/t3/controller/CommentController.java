@@ -16,6 +16,7 @@ import com.example.t3.comment.model.Comment;
 import com.example.t3.comment.model.Reply;
 import com.example.t3.comment.repository.CommentMapper;
 
+
 @RestController
 @RequestMapping("/comment")
 @CrossOrigin(origins = "http://localhost:4200") 
@@ -46,14 +47,34 @@ public class CommentController {
 	public void insertComment(@RequestBody Comment comment) {
 		System.out.println("CommentController #inserComment() called.");
 		commentMapper.postComment(comment);
-		
+		commentMapper.incrementCommentCount(comment);
 	}
 	
 	@PostMapping(value = "/writeReply")
 	public void insertReply(@RequestBody Reply reply) {
 		System.out.println("CommentController #insertReply() called.");
 		commentMapper.postReply(reply);
+		commentMapper.incrementCommentCountByReply(reply);
+	}
+	
+	@PostMapping("/delete")
+	public void deleteComment(@RequestBody Comment comment) {
+		System.out.println("CommentController #deleteComment() called.");
+
+		List<Reply> childReplies = getReplies(comment.getC_no());
+		for (Reply reply : childReplies) {
+			deleteReply(reply);
+		}
+		commentMapper.deleteComment(comment);
+		commentMapper.decrementCommentCountByComment(comment);
 		
+	}
+	
+	@PostMapping("/reply/delete")
+	public void deleteReply(@RequestBody Reply reply) {
+		System.out.println("CommentController #deleteReply() called.");
+		commentMapper.deleteReply(reply);
+		commentMapper.decrementCommentCount(reply);
 	}
 	
 	

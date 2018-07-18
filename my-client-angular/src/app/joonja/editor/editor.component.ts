@@ -14,6 +14,8 @@ import { HttpClient } from '@angular/common/http';
 })
 export class EditorComponent implements OnInit {
 
+  category : string = "카테고리"; //카테고리 드롭다운 상자 스트링
+
   apiUrl = 'http://localhost:8080';
 
   form: FormGroup;
@@ -24,22 +26,7 @@ export class EditorComponent implements OnInit {
   resultMap = new Map();
 
   result; // file upload 수행 이후 서버로부터 수신한 데이터
-  urls
-  // d_pageno : number;
-  // d_title : string;
-  // u_id : string;
-  // c_id : number;
-  // d_goalmoney : number;
-  // d_currentmoney : number;
-  // d_content : string;
-  // d_detialimg : string;
-  // d_thumbnailimg : string;
-  // d_hashtags : string;
-  // d_likeCount : number;
-  // d_commentCount : number;
-  // d_viewCount : number;
-  // d_date : Date;
-  // d_isConfirmed : string;
+
   detailPageForPost : DetailPage = new DetailPage();
   public categories : Category[];
   hashtags : string
@@ -67,6 +54,7 @@ export class EditorComponent implements OnInit {
 
   getCategoryId(category : Category) {
     this.detailPageForPost.c_id = category.c_id;
+    this.category = category.c_name;
   }
 
   InitializeDetailpage() {
@@ -128,7 +116,7 @@ export class EditorComponent implements OnInit {
         this.result = res;
         this.loading = false;
         this.file.setValue(null);
-        // alert("업로드완료" + this.result.fileDownloadUri);
+        alert("업로드완료" + this.result.fileDownloadUri);
         this.resultMap.set(key, this.result.fileDownloadUri);
       });
   }

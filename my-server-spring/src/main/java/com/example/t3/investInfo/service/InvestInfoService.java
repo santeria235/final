@@ -1,0 +1,45 @@
+package com.example.t3.investInfo.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.t3.detailpage.model.DetailPage;
+import com.example.t3.detailpage.repository.DetailPageMapper;
+import com.example.t3.investInfo.model.InvestInfo;
+import com.example.t3.investInfo.repository.InvestInfoMapper;
+import com.example.t3.user.model.User;
+import com.example.t3.user.repository.UserMapper;
+
+@Service
+public class InvestInfoService {
+
+	@Autowired
+	InvestInfoMapper investInfoMapper;
+	
+	@Autowired
+	DetailPageMapper detailPageMapper; 
+	
+	@Autowired
+	UserMapper userMapper;
+
+	public void insertIntoTables(InvestInfo investInfo) {
+		DetailPage detailPages = detailPageMapper.selectByPageNo(investInfo.getD_pageno());
+		User user = userMapper.getUserById(investInfo.getU_id());
+		int currentInvestMoney = investInfo.getI_investmoney();
+		
+		// t3_investinfo 테이블에 우선 입력
+		investInfoMapper.investItem(investInfo);
+		
+		// 페이지의 현재까지 모금액 업데이트하기
+		investInfo.setI_investmoney(currentInvestMoney + detailPages.getD_currentmoney());
+		investInfoMapper.updateDetailpageCurrentMoney(investInfo);
+		
+		// 유저의 현재 금액 업데이트하기
+		investInfo.setI_investmoney(user.getU_money() - currentInvestMoney);
+		investInfoMapper.updateUserMoney(investInfo);
+		
+		
+	}
+	
+	
+}

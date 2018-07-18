@@ -3,11 +3,9 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { HomeComponent } from './home/home.component';
 import { AppComponent } from './app.component';
-import { SectionComponent } from './section/section.component';
 import { FooterComponent } from './footer/footer.component';
 import { CardComponent } from './section/card/card.component';
 import { HeaderComponent } from './header/header.component';
-import { CategoryComponent } from './category/category.component';
 import { JoonjaComponent } from './joonja/joonja.component';
 import { EditorComponent } from './joonja/editor/editor.component';
 import { RecomendedAreaComponent } from './joonja/recomended-area/recomended-area.component';
@@ -23,7 +21,6 @@ const routes: Routes = [
   { path: 'joonja/:pageNo', component: JoonjaComponent  },
   { path: 'signin', component: SigninComponent },
   { path: 'editor', component: EditorComponent },
-  { path: 'fileupload', component: FileUploadComponent }
 
 
 ];

@@ -11,9 +11,10 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Reply {
+	  private int r_no;
 	  private int c_no;
 	  private String r_writer;
-	  private String r_writer_email;
+	  private String r_pw;
 	  private String r_content;
 	  private Date r_date;
 }

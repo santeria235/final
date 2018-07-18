@@ -1,6 +1,6 @@
 <div class="container-fluid">
   <div class="row">
-    <div class="col-sm-2" style="background-color:lavender;"></div>
+    <div class="col-sm-2" ></div>
 
     <div class="col-sm-8">
       <div class="container mt-3">
@@ -10,7 +10,7 @@
               <div class="input-group mt-3 mb-3">
                 <div class="input-group-prepend">
                   <button type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown">
-                  카테고리
+                  {{category}}
                 </button>
                   <div class="dropdown-menu">
                     <a class="dropdown-item" href="javascript:void(0)" *ngFor="let category of categories" (click)="getCategoryId(category)">{{category.c_name}}</a>
@@ -59,13 +59,13 @@
             </form>
           </div>
 
-          <div class="container">
+          <!-- <div class="container">
             <label>해쉬태그:</label>
 
 
             <br />
             <input type="text" class="form-control" placeholder="해쉬태그를 입력하세요" [(ngModel)]="hashtags" [ngModelOptions]="{standalone: true}">
-            <br /><br />
+            <br /><br /> -->
 
             <button type="submit" class="btn btn-primary" (click)="postDetailpage()">Submit</button>
             <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />

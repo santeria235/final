@@ -12,6 +12,7 @@ CREATE TABLE t3_user
     PRIMARY KEY (u_id)
 );
 
+select * from t3_user;
 drop table t3_investinfo;
 CREATE TABLE t3_investinfo(
     `i_id`           INT            NOT NULL AUTO_INCREMENT    COMMENT '순번', 
@@ -88,7 +89,7 @@ CREATE TABLE t3_comment
     `c_no`             INT                         NOT NULL    AUTO_INCREMENT COMMENT '게시글번호', 
     `d_pageno`         INT                         NOT NULL                   COMMENT '페이지번호', 
     `c_writer`         VARCHAR(20)                 NOT NULL                   COMMENT '작성자', 
-    `c_writer_email`   VARCHAR(200)                NOT NULL                   COMMENT '작성자 이메일', 
+    `c_pw`             VARCHAR(20)                 NOT NULL                   COMMENT '코멘트 비밀번호', 
     `c_content`        VARCHAR(4000)               NOT NULL                   COMMENT '내용', 
     `c_date`           DATETIME      DEFAULT now() NOT NULL                   COMMENT '작성일시', 
     PRIMARY KEY (c_no),
@@ -119,13 +120,26 @@ CREATE TABLE t3_reply
 (
     `c_no`             INT                         NOT NULL                   COMMENT '게시글번호', 
     `r_writer`         VARCHAR(20)                 NOT NULL                   COMMENT '작성자', 
-    `r_writer_email`   VARCHAR(200)                NOT NULL                   COMMENT '작성자 이메일', 
+    `r_pw`             VARCHAR(20)                 NOT NULL                   COMMENT '답글 비밀번호',  
     `r_content`        VARCHAR(4000)               NOT NULL                   COMMENT '내용', 
     `r_date`           DATETIME      DEFAULT now() NOT NULL                   COMMENT '작성일시', 
 	 FOREIGN KEY (`c_no`) REFERENCES `t3_comment`(`c_no`)
 ); 
 
+select * from t3_detailpage;
+
+UPDATE t3_detailpage SET d_commentCount=d_commentCount+1 
+WHERE d_pageno=(select a.d_pageno from t3_comment a where a.c_no=7);
+
+(select * from t3_comment a where a.c_no=7);
 select * from t3_reply;
+select * from t3_comment;
+DELETE FROM t3_reply where c_no=7;
+DELETE FROM t3_comment where c_no=7;
+
+SELECT * FROM t3_detailpage order by d_viewCount desc limit 3;
+
+
 
 Insert into Table t3_detailpage(`d_pageno`,d_title`,`u_id`,`c_id`,`d_goalmoney`,`d_currentmoney`  
     `d_content`,`d_img`,`d_likeCount`,`d_commentCount`,`d_viewCount`,`d_date`)

@@ -12,7 +12,8 @@
             <div class="post-info">
 
               <div class="left-area">
-                <a class="avatar" href="#"><img src="assets/images/avatar-1-120x120.jpg" alt="Profile Image"></a>
+                <!-- <a class="avatar" href="#"><img src="assets/images/avatar-1-120x120.jpg" alt="Profile Image"></a> -->
+                <a class="avatar" href="#"><img src="{{writer ? writer.u_profileImg : ''}}" alt="Profile Image"></a>
               </div>
 
               <div class="middle-area">
@@ -31,19 +32,19 @@
 
             <p class="para">{{detailPage ? detailPage.d_content : ''}}</p>
 
-            <ul class="tags">
+            <!-- <ul class="tags">
               <li><a href="#">태그Mnual</a></li>
               <li><a href="#">태그Liberty</a></li>
               <li><a href="#">태그Recommendation</a></li>
               <li><a href="#">태그Inspiration</a></li>
-            </ul>
+            </ul> -->
           </div>
           <!-- blog-post-inner -->
 
           <div class="post-icons-area">
             <ul class="post-icons">
               <li><a href="javascript:void(0)" (click)="incrementLikeCount()"><i class="ion-heart"></i>좋아요{{detailPage ? detailPage.d_likeCount : ''}}</a></li>
-              <li><a><i class="ion-chatbubble"></i>댓글수{{commentCount}}</a></li>
+              <li><a><i class="ion-chatbubble"></i>댓글수{{detailPage ? detailPage.d_commentCount : ''}}</a></li>
               <li><a><i class="ion-eye"></i>조회수{{detailPage ? detailPage.d_viewCount : ''}}</a></li>
             </ul>
 
@@ -58,7 +59,7 @@
           <div class="post-footer post-info">
 
             <div class="left-area">
-              <a class="avatar" href="#"><img src="assets/images/avatar-1-120x120.jpg" alt="Profile Image"></a>
+              <a class="avatar" href="#"><img src="{{writer ? writer.u_profileImg : ''}}" alt="Profile Image"></a>
             </div>
 
             <div class="middle-area">
@@ -84,23 +85,24 @@
             <h4 class="title"><b>펀딩 현황</b></h4>
             <p>목표 펀딩액 : {{detailPage ? detailPage.d_goalmoney : ''}}</p><br />
             <p>현재 펀딩액 : {{detailPage ? detailPage.d_currentmoney : ''}}</p><br />
-
+            <div class="progress">
+              <div class="progress-bar" id="progressbar" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+                {{detailPage ? (detailPage.d_currentmoney/detailPage.d_goalmoney)*100 + '%' : ''}}
+              </div>
+            </div>
           </div>
 
           <div class="sidebar-area subscribe-area">
 
-            <h4 class="title"><b>작성자한테 이메일보내기</b></h4>
-            <div class="input-area">
-              <form>
-                <input class="email-input" type="text" placeholder="Enter your email">
-                <button class="submit-btn" type="submit"><i class="icon ion-ios-email-outline"></i></button>
-              </form>
-            </div>
+
+            <a class="load-more-btn" href="javascript:void(0)"(click)="fundingToggle()"><b>펀딩하기</b></a>
+            <app-purchase *ngIf="fundToggle" [loggedInUser]="loggedInUser" [pageNo]="pageNo"></app-purchase>
+
 
           </div>
           <!-- subscribe-area -->
 
-          <div class="tag-area">
+          <!-- <div class="tag-area">
 
             <h4 class="title"><b>TAG CLOUD</b></h4>
             <ul>
@@ -114,7 +116,7 @@
               <li><a href="#">Interpritation</a></li>
             </ul>
 
-          </div>
+          </div> -->
           <!-- subscribe-area -->
 
         </div>

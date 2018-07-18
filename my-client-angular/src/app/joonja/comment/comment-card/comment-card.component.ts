@@ -28,7 +28,7 @@ export class CommentCardComponent implements OnInit {
   setReplyForPost() {
     if (this.authService.isLoggedIn()) {
         this.replyForPost.r_writer = this.loggedInUser.u_name;
-        this.replyForPost.r_writer_email = this.loggedInUser.u_id;
+        this.replyForPost.r_pw = this.loggedInUser.u_pw;
     }
   }
   getReplies(commentNo) {
@@ -49,6 +49,22 @@ export class CommentCardComponent implements OnInit {
       alert("답글이 등록되었습니다.");
       this.replyToggle = !this.replyToggle;
       this.getReplies(this.comment.c_no);
+      });
+  }
+
+  clickRemove() {
+    this.commentService.deleteComment(this.comment)
+    .subscribe(() => {
+      alert("댓글이 삭제되었습니다.");
+      location.reload();
+      });
+  }
+
+  clickReplyRemove(reply) {
+    this.commentService.deleteReply(reply)
+    .subscribe(() => {
+      alert("댓글이 삭제되었습니다.");
+      location.reload();
       });
   }
 }

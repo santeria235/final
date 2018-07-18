@@ -10,6 +10,7 @@ import { DetailpageHttpService } from '../../detailpage-http.service';
 export class RecomendedAreaComponent implements OnInit {
 
   RecommendedCards : DetailPage[];
+
   constructor(private DetailpageHttpService: DetailpageHttpService) { }
 
   ngOnInit() {
@@ -17,7 +18,7 @@ export class RecomendedAreaComponent implements OnInit {
   }
 
   show() {
-    this.DetailpageHttpService.findAll().subscribe(res => {
+    this.DetailpageHttpService.findRecommendedDetailPage().subscribe(res => {
       this.RecommendedCards = res;
     });
   }

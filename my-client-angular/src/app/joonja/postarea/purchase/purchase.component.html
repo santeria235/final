@@ -1,0 +1,19 @@
+<div class="container mt-3">
+  <label>{{loggedInUser.u_name}}님의 현재 보유금액 : {{loggedInUser.u_money}}원</label>
+  <label>투자후 보유금액 : {{investInfo.i_investmoney==null? 0 : loggedInUser.u_money - investInfo.i_investmoney}}</label>
+  <label *ngIf="loggedInUser.u_money - investInfo.i_investmoney < 0">현재 보유금액이 부족합니다.</label>
+  <div class="container mt-3">
+    <input type="number" class="form-control" placeholder="투자하실 금액" [(ngModel)]="investInfo.i_investmoney">
+  </div>
+  <br />
+
+  <div class="container">
+
+    <!--결제하시겠습니까?-->
+
+    <label class="checkbox-inline">
+          <label>상품정보 및 결제금액이 확실합니까?</label>
+    <input type="checkbox" [checked]="isChecked" (change)="isChecked = !isChecked">&nbsp;확인
+    </label>
+    <button type="submit" class="btn btn-primary" (click)="invest()">결제하기</button>
+  </div>

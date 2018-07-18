@@ -11,8 +11,8 @@
         <h4 class="title"><a [routerLink]="['/joonja', card.d_pageno]"><b>{{card.d_content}}</b></a></h4>
 
         <ul class="post-footer">
-          <li><a href="#"><i class="ion-heart"></i>{{card.d_likeCount}}</a></li>
-          <li><a><i class="ion-chatbubble"></i>{{commentCount}}</a></li>
+          <li><a href="javascript:void(0)" (click)="incrementLikeCount(card.d_pageno)"><i class="ion-heart"></i>{{card.d_likeCount}}</a></li>
+          <li><a><i class="ion-chatbubble"></i>{{card.d_commentCount}}</a></li>
           <li><a><i class="ion-eye"></i>{{card.d_viewCount}}</a></li>
         </ul>
 

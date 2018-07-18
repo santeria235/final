@@ -13,9 +13,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.t3.comment.model.Comment;
 import com.example.t3.detailpage.model.DetailPage;
 import com.example.t3.detailpage.repository.DetailPageMapper;
+import com.example.t3.user.model.User;
 
 
 
@@ -33,10 +33,18 @@ public class DetailPageController {
 		return detailPages;
 	}
 	
-	@GetMapping(value = "/{dp_pageno}")
+	@GetMapping(value = "/recommended")
 	@ResponseBody
-	public DetailPage getDetailPage(@PathVariable int dp_pageno) {
-		DetailPage detailPages = detailPageMapper.selectByPageNo(dp_pageno);
+	public List<DetailPage> getRecommendedDetailPages() {
+		List<DetailPage> detailPages = detailPageMapper.getRecommendedDetailPages();
+		return detailPages;
+	}
+	
+	@GetMapping(value = "/{d_pageno}")
+	@ResponseBody
+	public DetailPage getDetailPage(@PathVariable int d_pageno) {
+		DetailPage detailPages = detailPageMapper.selectByPageNo(d_pageno);
+		detailPageMapper.incrementViewCount(d_pageno);
 		return detailPages;
 	}
 	
@@ -47,23 +55,38 @@ public class DetailPageController {
 		return detailPages;
 	}
 	
+	@GetMapping(value = "/user/{u_id}")
+	@ResponseBody
+	public User getUserByUserId(@PathVariable String u_id) {
+		System.out.println("getUserByUserId() called.");
+		System.out.println("userid:"+u_id);
+		User user = detailPageMapper.getUserByUserId(u_id);
+		return user;
+	}
+	
 	@PostMapping(value = "/write")
 	public void insertDetailpage(@RequestBody DetailPage detailpage) {
 		System.out.println("DetailPageController #insertDetailpage() called.");
 		detailPageMapper.postDetailpage(detailpage);
 	}
 	
-	@PutMapping(value = "/like")
-	public int incrementLikeCount(@RequestBody DetailPage detailPage) {
+	@PostMapping(value = "/like")
+	public DetailPage incrementLikeCount(@RequestBody DetailPage detailPage) {
 		System.out.println("DetailPageController #incrementLikeCount() called.");
-		return detailPageMapper.incrementLikeCount(detailPage);
+		detailPageMapper.incrementLikeCount(detailPage);
+		int d_pageno = detailPage.getD_pageno();
+		return detailPageMapper.selectByPageNo(d_pageno);
 	}
 	
-	@PutMapping(value = "/view")
-	public int incrementViewCount(@RequestBody DetailPage detailPage) {
-		System.out.println("DetailPageController #incrementViewCount() called.");
-		return detailPageMapper.incrementViewCount(detailPage);
+	@PostMapping(value = "/dislike")
+	public DetailPage decrementLikeCount(@RequestBody DetailPage detailPage) {
+		System.out.println("DetailPageController #decrementLikeCount() called.");
+		detailPageMapper.decrementLikeCount(detailPage);
+		int d_pageno = detailPage.getD_pageno();
+		return detailPageMapper.selectByPageNo(d_pageno);
 	}
+	
+	
 	
 
 //	

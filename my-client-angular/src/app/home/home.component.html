@@ -1,2 +1,43 @@
 <!-- <app-category [categories]="categories"></app-category>
 	<app-section></app-section> -->
+  <div class="main-slider">
+    <div class="swiper-container position-static" data-slide-effect="slide" data-autoheight="false" data-swiper-speed="500" data-swiper-autoplay="10000" data-swiper-margin="0" data-swiper-slides-per-view="4" data-swiper-breakpoints="true" data-swiper-loop="true"
+      [swiper]="config" [(index)]="index">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide" *ngFor="let c of categories">
+          <a class="slider-category" href="javascript:void(0)" (click)="getDetailpageByCategoryId(c)">
+            <div class="blog-image"><img src="{{c.c_categoryimg}}" alt="Blog Image"></div>
+            <div class="category">
+              <div class="display-table center-text">
+                <div class="display-table-cell">
+                  <h3><b>{{c.c_name}}</b></h3>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <!-- swiper-slide -->
+        <!-- swiper-slide -->
+      </div>
+      <!-- swiper-wrapper -->
+    </div>
+    <!-- swiper-container -->
+  </div>
+  <!-- slider -->
+
+  <section class="blog-area section">
+    <div class="container">
+
+      <div class="row">
+
+  <div class="col-lg-4 col-md-6" *ngFor="let c of cards">
+  <app-card [card]=c></app-card>
+    </div><!-- col-lg-4 col-md-6 -->
+
+
+      </div><!-- row -->
+
+      <a class="load-more-btn" href="#"><b>LOAD MORE</b></a>
+
+    </div><!-- container -->
+  </section><!-- section -->

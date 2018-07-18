@@ -4,7 +4,7 @@ import { User } from './user';
 import { ViewChild, ElementRef } from '@angular/core';
 import { Http} from '@angular/http';
 import { Router, ActivatedRoute } from "@angular/router";
-import { NgForm, EmailValidator,FormBuilder } from "@angular/forms";
+import { NgForm, EmailValidator,FormGroup, FormControl, FormBuilder, Validators } from "@angular/forms";
 import { HttpClientModule,HttpHeaders, HttpClient,HttpErrorResponse } from '@angular/common/http';
 import { TokenService } from '../service/token.service';
 import { AuthService } from '../service/auth.service';
@@ -27,11 +27,23 @@ export class SigninComponent implements OnInit {
 
   // 뷰의 모달객체
   @ViewChild('loginModal') loginModal: ElementRef;
+
+  apiUrl = 'http://localhost:8080';
+
+  form: FormGroup;
+  loading = false;
+  result;
+
   constructor(private userService: UserService,
-              private http : Http,
+              private http : HttpClient,
               private router : Router,
               private tokenService : TokenService,
-              private authService : AuthService) { }
+              private authService : AuthService,
+              private fb: FormBuilder,) {
+                this.form = this.fb.group({
+                  file: ['', Validators.required]
+                });
+              }
 
   ngOnInit() {
   }
@@ -75,9 +87,28 @@ export class SigninComponent implements OnInit {
     } else {
       alert("비밀번호를 확인해주세요.");
     }
+  }
 
+  onSubmit(files: FileList) {
+    const formData = new FormData();
+    formData.append('file', files[0]);
 
+    this.loading = true;
+    // Send data (payload = formData)
+    // console.log(formData.get('file'));
+  //  폼데이터를 서버로 전송한다.
+    this.http.post(`${this.apiUrl}/uploadFile`, formData)
+      .subscribe(res => {
+        this.result = res;
+        this.loading = false;
+        this.file.setValue(null);
+        alert("업로드완료" + this.result.fileDownloadUri);
+        this.user.u_profileImg=this.result.fileDownloadUri;
+      });
+  }
 
+  get file() {
+    return this.form.get('file');
   }
 
 

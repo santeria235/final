@@ -22,6 +22,8 @@ public interface UserMapper {
 		@Insert(REGISTER_USER)
 		public int registerUser(User user);
 		
+		@Select(USER_LOGIN_CHECK)
+		public User getUserById(String u_id);
 		
 		@Select(USER_LOGIN_CHECK)
 		public User userLoginCheck(User user);

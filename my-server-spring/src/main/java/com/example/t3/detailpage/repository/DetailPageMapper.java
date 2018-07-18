@@ -4,12 +4,12 @@ import java.util.List;
 
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Param;
+import org.apache.ibatis.annotations.Options;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
 
-import com.example.t3.comment.model.Comment;
 import com.example.t3.detailpage.model.DetailPage;
+import com.example.t3.user.model.User;
 
 
 
@@ -28,12 +28,17 @@ public interface DetailPageMapper {
 //	public int update(DetailPage detailPage);
 //	public int delete(int p_code);
 //	
-	@Select("SELECT COUNT(*) FROM t3_detailpage")
+	@Select("SELECT COUNT(*) FROM t3_detailpage order by d_viewCount desc")
 	public int count();
 	
 	@Select("SELECT * FROM t3_detailpage")
 	public List<DetailPage> selectAll();
 	
+	@Select("SELECT * FROM t3_detailpage order by d_viewCount desc limit 3")
+	public List<DetailPage> getRecommendedDetailPages();
+	
+	@Select("SELECT * FROM t3_user where u_id=#{u_id}")
+	public User getUserByUserId(String u_id);
 	
 	@Select("SELECT * FROM t3_detailpage where c_id=#{c_id}")
 	public List<DetailPage> selectByCategoryId(int c_id);
@@ -44,10 +49,17 @@ public interface DetailPageMapper {
 
 	
 	@Update("UPDATE t3_detailpage SET d_likeCount=d_likeCount+1 WHERE d_pageno=#{d_pageno}")
+	@Options(useGeneratedKeys=true, keyProperty="d_pageno")
 	public int incrementLikeCount(DetailPage detailPage);	
 	
+	@Update("UPDATE t3_detailpage SET d_likeCount=d_likeCount-1 WHERE d_pageno=#{d_pageno}")
+	@Options(useGeneratedKeys=true, keyProperty="d_pageno")
+	public int decrementLikeCount(DetailPage detailPage);	
+	
 	@Update("UPDATE t3_detailpage SET d_viewCount=d_viewCount+1 WHERE d_pageno=#{d_pageno}")
-	public int incrementViewCount(DetailPage detailPage);
+	public int incrementViewCount(int d_pageno);
 //	public List<Board> selectByLimit(@Param("page") int page, @Param("size") int size);
 //	public int increment(long id);
+
+	
 }

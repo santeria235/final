@@ -22,18 +22,12 @@ export class CommentComponent implements OnInit {
     this.getComments(this.pageNo);
     this.commentForPost.d_pageno=this.pageNo;
     this.loggedInUser = this.authService.getLoggedInUser();
-    // this.loggedInUser = JSON.parse(this.loggedInUser._body);
-
-
-    // console.log("------------------------------------------");
-    // console.log(this.loggedInUser);
-    // console.log("------------------------------------------");
   }
 
   setCommentForPost() {
     if (this.authService.isLoggedIn()) {
         this.commentForPost.c_writer = this.loggedInUser.u_name;
-        this.commentForPost.c_writer_email = this.loggedInUser.u_id;
+        this.commentForPost.c_pw = this.loggedInUser.u_pw;
     }
   }
   getComments(pageNo) {
