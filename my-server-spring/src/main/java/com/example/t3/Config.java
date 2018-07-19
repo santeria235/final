@@ -8,7 +8,13 @@ import org.mybatis.spring.SqlSessionFactoryBean;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.core.io.ClassPathResource;
+import org.springframework.core.io.Resource;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
+import org.springframework.jdbc.datasource.DriverManagerDataSource;
+import org.springframework.jdbc.datasource.init.DatabasePopulator;
+import org.springframework.jdbc.datasource.init.DatabasePopulatorUtils;
+import org.springframework.jdbc.datasource.init.ResourceDatabasePopulator;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
@@ -28,9 +34,18 @@ public class Config implements WebMvcConfigurer {
 		dataSource.setUrl("jdbc:mysql://localhost:3306/t3?createDatabaseIfNotExist=true");
 		dataSource.setUsername("root");
 		dataSource.setPassword("1234");
+		
+    
+		Resource initSchema = new ClassPathResource("schema.sql");
+	    Resource initData = new ClassPathResource("data.sql");
+	    DatabasePopulator databasePopulator = new ResourceDatabasePopulator(initSchema, initData);
+	    DatabasePopulatorUtils.execute(databasePopulator, dataSource);
+	    
 		return dataSource;
 	}
 
+	
+	
 	@Bean
 	public DataSourceTransactionManager transactionManager() {
 		return new DataSourceTransactionManager(getDataSource());

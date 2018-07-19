@@ -1,6 +1,5 @@
 
-SET foreign_key_checks = 0;
-DROP table t3_user;
+
 CREATE TABLE t3_user
 (
     `u_id`         VARCHAR(50)     NOT NULL                COMMENT '이메일(계정아이디)', 
@@ -12,27 +11,7 @@ CREATE TABLE t3_user
     PRIMARY KEY (u_id)
 );
 
-select * from t3_user;
-drop table t3_investinfo;
-CREATE TABLE t3_investinfo(
-    `i_id`           INT            NOT NULL AUTO_INCREMENT    COMMENT '순번', 
-    `u_id`           VARCHAR(50)    NOT NULL                   COMMENT '유저아이디', 
-    `d_pageno`       INT            NOT NULL                   COMMENT '페이지번호', 
-    `i_investmoney`  INT			   NOT NULL DEFAULT 0		   COMMENT '투자금액', 
-    PRIMARY KEY (i_id),
-    FOREIGN KEY (`u_id`) REFERENCES `t3_user`(`u_id`),
-    FOREIGN KEY (`d_pageno`) REFERENCES `t3_detailpage`(`d_pageno`)
-);
 
-CREATE TABLE t3_detailpage_hashtags(
-    `h_id`            INT        AUTO_INCREMENT              COMMENT '순번' ,
-    `d_pageno`        INT                        NOT NULL    COMMENT '페이지번호', 
-    `hashtag`         VARCHAR(20)                NOT NULL    COMMENT '해쉬태그', 
-    PRIMARY KEY (h_id),
-    FOREIGN KEY (`d_pageno`) REFERENCES `t3_detailpage`(`d_pageno`)
-);
-
-drop table t3_categories;
 CREATE TABLE t3_categories
 (
     `c_id`          INT             NOT NULL    COMMENT '카테고리 번호', 
@@ -41,8 +20,7 @@ CREATE TABLE t3_categories
     PRIMARY KEY (c_id)
 );
 
-SET foreign_key_checks = 0;
-drop table t3_detailpage;
+
 CREATE TABLE t3_detailpage
 (
     `d_pageno`       INT    AUTO_INCREMENT NOT NULL    COMMENT '페이지번호', 
@@ -63,26 +41,28 @@ CREATE TABLE t3_detailpage
     FOREIGN KEY (`c_id`) REFERENCES `t3_categories`(`c_id`),
     FOREIGN KEY (`u_id`) REFERENCES `t3_user`(`u_id`)
 );
-select * from t3_detailpage;
-drop table t3_detailpage_comment;
-
-SELECT * FROM t3_comment WHERE (SELECT c_no FROM t3_detailpage_comment dc WHERE dc.d_pageno = 1) = t3_comment.c_no;
-
-select c.c_no, c.c_writer, c.c_writer_email, c.c_content, c.c_date FROM(
-select a.d_pageno, a.c_no, b.c_writer, b.c_writer_email, b.c_content, b.c_date
-from t3_detailpage_comment a, t3_comment b 
-where a.c_no=b.c_no
-) c
-where c.d_pageno = 1;
 
 
 
+CREATE TABLE t3_investinfo(
+    `i_id`           INT            NOT NULL AUTO_INCREMENT    COMMENT '순번', 
+    `u_id`           VARCHAR(50)    NOT NULL                   COMMENT '유저아이디', 
+    `d_pageno`       INT            NOT NULL                   COMMENT '페이지번호', 
+    `i_investmoney`  INT			   NOT NULL DEFAULT 0		   COMMENT '투자금액', 
+    PRIMARY KEY (i_id),
+    FOREIGN KEY (`u_id`) REFERENCES `t3_user`(`u_id`),
+    FOREIGN KEY (`d_pageno`) REFERENCES `t3_detailpage`(`d_pageno`)
+);
 
-SET foreign_key_checks = 0;
-drop table t3_comment;
+CREATE TABLE t3_detailpage_hashtags(
+    `h_id`            INT        AUTO_INCREMENT              COMMENT '순번' ,
+    `d_pageno`        INT                        NOT NULL    COMMENT '페이지번호', 
+    `hashtag`         VARCHAR(20)                NOT NULL    COMMENT '해쉬태그', 
+    PRIMARY KEY (h_id),
+    FOREIGN KEY (`d_pageno`) REFERENCES `t3_detailpage`(`d_pageno`)
+);
 
-SET foreign_key_checks = 0;
-drop table t3_reply;
+
 
 CREATE TABLE t3_comment
 (
@@ -97,77 +77,17 @@ CREATE TABLE t3_comment
 ); 
 
 
-Insert into t3_comment Values(0,1,"이상오","santeria235@gmail.com","안녕안녕",now());
-Insert into t3_comment Values(0,1,"레골라스","santeria235@gmail.com","안녕안녕",now());
-Insert into t3_comment Values(0,2,"김리","santeria235@gmail.com","안녕안녕",now());
-Insert into t3_comment Values(0,2,"간달프","santeria235@gmail.com","안녕안녕",now());
-Insert into t3_comment Values(0,2,"프로도","santeria235@gmail.com","안녕안녕",now());
-select * from t3_comment;
-delete * from t3_comment;
 
-Insert into t3_reply Values(1,"이상오","santeria235@gmail.com","안녕안녕",now());
-Insert into t3_reply Values(1,"레골라스","santeria235@gmail.com","안녕안녕",now());
-Insert into t3_reply Values(2,"김리","santeria235@gmail.com","안녕안녕",now());
-Insert into t3_reply Values(2,"간달프","santeria235@gmail.com","안녕안녕",now());
-Insert into t3_reply Values(2,"프로도","santeria235@gmail.com","안녕안녕",now());
-
-SET foreign_key_checks = 0;
-drop table t3_comment;
-select * from t3_reply;
-SET foreign_key_checks = 0;
-drop table t3_reply;
 CREATE TABLE t3_reply
 (
-    `c_no`             INT                         NOT NULL                   COMMENT '게시글번호', 
-    `r_writer`         VARCHAR(20)                 NOT NULL                   COMMENT '작성자', 
-    `r_pw`             VARCHAR(20)                 NOT NULL                   COMMENT '답글 비밀번호',  
-    `r_content`        VARCHAR(4000)               NOT NULL                   COMMENT '내용', 
-    `r_date`           DATETIME      DEFAULT now() NOT NULL                   COMMENT '작성일시', 
+    `r_no`             INT           AUTO_INCREMENT NOT NULL                   COMMENT '게시글번호',
+    `c_no`             INT                          NOT NULL                   COMMENT '게시글번호', 
+    `r_writer`         VARCHAR(20)                  NOT NULL                   COMMENT '작성자', 
+    `r_pw`             VARCHAR(20)                  NOT NULL                   COMMENT '답글 비밀번호',  
+    `r_content`        VARCHAR(4000)                NOT NULL                   COMMENT '내용', 
+    `r_date`           DATETIME      DEFAULT now()  NOT NULL                   COMMENT '작성일시', 
+    PRIMARY KEY (r_no),
 	 FOREIGN KEY (`c_no`) REFERENCES `t3_comment`(`c_no`)
 ); 
 
-select * from t3_detailpage;
-
-UPDATE t3_detailpage SET d_commentCount=d_commentCount+1 
-WHERE d_pageno=(select a.d_pageno from t3_comment a where a.c_no=7);
-
-(select * from t3_comment a where a.c_no=7);
-select * from t3_reply;
-select * from t3_comment;
-DELETE FROM t3_reply where c_no=7;
-DELETE FROM t3_comment where c_no=7;
-
-SELECT * FROM t3_detailpage order by d_viewCount desc limit 3;
-
-
-
-Insert into Table t3_detailpage(`d_pageno`,d_title`,`u_id`,`c_id`,`d_goalmoney`,`d_currentmoney`  
-    `d_content`,`d_img`,`d_likeCount`,`d_commentCount`,`d_viewCount`,`d_date`)
-	 Values(Data1, Data2, Data3...)
 	 
-select * from t3_categories;
-drop table t3_categories;
-Insert into t3_categories Values('100','ART','http://localhost:8080/assets/categoryimage/art.jpg');
-Insert into t3_categories Values('200','COMICS','http://localhost:8080/assets/categoryimage/comics.jpg');
-Insert into t3_categories Values('300','CRAFTS','http://localhost:8080/assets/categoryimage/crafts.jpg');
-Insert into t3_categories Values('400','DANCE','http://localhost:8080/assets/categoryimage/dance.jpg');
-Insert into t3_categories Values('500','DESIGN','http://localhost:8080/assets/categoryimage/design.jpg');
-Insert into t3_categories Values('600','FASHION','http://localhost:8080/assets/categoryimage/fashion.jpg');
-Insert into t3_categories Values('700','FILM & VIDEO','http://localhost:8080/assets/categoryimage/filmvideo.jpg');
-Insert into t3_categories Values('800','FOOD','http://localhost:8080/assets/categoryimage/Food.jpg');
-Insert into t3_categories Values('900','GAMES','http://localhost:8080/assets/categoryimage/games.png');
-Insert into t3_categories Values('1000','JOURNALISM','http://localhost:8080/assets/categoryimage/journalism.jpg');
-Insert into t3_categories Values('1100','MUSIC','http://localhost:8080/assets/categoryimage/music.jpg');
-Insert into t3_categories Values('1200','PHOTOGRAPHY','http://localhost:8080/assets/categoryimage/photography.jpg');
-Insert into t3_categories Values('1300','TECHNOLOGY','http://localhost:8080/assets/categoryimage/Techonology.png');
-
-
-insert into t3_user values('santeria235@gmail.com','1234','이상오','temp','T');
-
-insert into t3_detailpage
-values(null, '제목','santeria235@gmail.com',100,30000000,0,
-'내용이 오는 자리 내용이 오는 자리 내용이 오는 자리 내용이 오는 자리 내용이 오는 자리 내용이 오는 자리',
-'이미지url',0,0,0,now());
-
-    
-select * from t3_detailpage;
